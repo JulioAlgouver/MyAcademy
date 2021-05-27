@@ -62,7 +62,7 @@ namespace MyAcademy
             try
             {
                 var vcon = conexaoBanco();
-                ; var cmd = vcon.CreateCommand();
+                var cmd = vcon.CreateCommand();
                 {
                     cmd.CommandText = SQL;
                     dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);

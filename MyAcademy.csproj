@@ -65,6 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aluno.cs" />
+    <Compile Include="Convenio.cs" />
     <Compile Include="database.cs" />
     <Compile Include="F_BuscaUsuario.cs">
       <SubType>Form</SubType>
@@ -126,6 +128,12 @@
     <Compile Include="F_Gestao.Designer.cs">
       <DependentUpon>F_Gestao.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_GridConvenios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_GridConvenios.Designer.cs">
+      <DependentUpon>F_GridConvenios.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_GridUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Gestao.resx">
       <DependentUpon>F_Gestao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_GridConvenios.resx">
+      <DependentUpon>F_GridConvenios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_GridUsuarios.resx">
       <DependentUpon>F_GridUsuarios.cs</DependentUpon>
