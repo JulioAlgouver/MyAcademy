@@ -31,26 +31,26 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarNovoToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeProfissionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarNovoToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarProfessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroDeTurmasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarNovoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarTurmasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroDeConvêniosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarNovoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarConvêniosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroDeConvêniosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroDeTurmasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controleDeTurmasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ferramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarNovoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarConvêniosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarNovoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarTurmasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarNovoToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarProfessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarNovoToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +89,19 @@
             this.cadastroDeAlunosToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.cadastroDeAlunosToolStripMenuItem.Text = "Cadastro de Alunos";
             // 
+            // cadastrarNovoToolStripMenuItem4
+            // 
+            this.cadastrarNovoToolStripMenuItem4.Name = "cadastrarNovoToolStripMenuItem4";
+            this.cadastrarNovoToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarNovoToolStripMenuItem4.Text = "Cadastrar Novo";
+            this.cadastrarNovoToolStripMenuItem4.Click += new System.EventHandler(this.cadastrarNovoToolStripMenuItem4_Click);
+            // 
+            // consultarAlunosToolStripMenuItem
+            // 
+            this.consultarAlunosToolStripMenuItem.Name = "consultarAlunosToolStripMenuItem";
+            this.consultarAlunosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.consultarAlunosToolStripMenuItem.Text = "Consultar Alunos";
+            // 
             // cadastroDeProfissionalToolStripMenuItem
             // 
             this.cadastroDeProfissionalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -98,34 +111,40 @@
             this.cadastroDeProfissionalToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.cadastroDeProfissionalToolStripMenuItem.Text = "Cadastro de Professores";
             // 
-            // cadastroDeUsuáriosToolStripMenuItem
+            // cadastrarNovoToolStripMenuItem3
             // 
-            this.cadastroDeUsuáriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarNovoToolStripMenuItem,
-            this.consultarUsuárioToolStripMenuItem});
-            this.cadastroDeUsuáriosToolStripMenuItem.Name = "cadastroDeUsuáriosToolStripMenuItem";
-            this.cadastroDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.cadastroDeUsuáriosToolStripMenuItem.Text = "Cadastro de Usuários";
+            this.cadastrarNovoToolStripMenuItem3.Name = "cadastrarNovoToolStripMenuItem3";
+            this.cadastrarNovoToolStripMenuItem3.Size = new System.Drawing.Size(188, 22);
+            this.cadastrarNovoToolStripMenuItem3.Text = "Cadastrar Novo";
+            this.cadastrarNovoToolStripMenuItem3.Click += new System.EventHandler(this.cadastrarNovoToolStripMenuItem3_Click);
             // 
-            // cadastrarNovoToolStripMenuItem
+            // consultarProfessorToolStripMenuItem
             // 
-            this.cadastrarNovoToolStripMenuItem.Name = "cadastrarNovoToolStripMenuItem";
-            this.cadastrarNovoToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.cadastrarNovoToolStripMenuItem.Text = "Cadastrar Novo";
-            this.cadastrarNovoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoToolStripMenuItem_Click);
+            this.consultarProfessorToolStripMenuItem.Name = "consultarProfessorToolStripMenuItem";
+            this.consultarProfessorToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.consultarProfessorToolStripMenuItem.Text = "Consultar Professores";
             // 
-            // consultarUsuárioToolStripMenuItem
+            // cadastroDeTurmasToolStripMenuItem
             // 
-            this.consultarUsuárioToolStripMenuItem.Name = "consultarUsuárioToolStripMenuItem";
-            this.consultarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultarUsuárioToolStripMenuItem.Text = "Consultar Usuários";
-            this.consultarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.consultarUsuárioToolStripMenuItem_Click);
+            this.cadastroDeTurmasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarNovoToolStripMenuItem2,
+            this.consultarTurmasToolStripMenuItem});
+            this.cadastroDeTurmasToolStripMenuItem.Name = "cadastroDeTurmasToolStripMenuItem";
+            this.cadastroDeTurmasToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.cadastroDeTurmasToolStripMenuItem.Text = "Cadastro de Turmas";
             // 
-            // sobreToolStripMenuItem
+            // cadastrarNovoToolStripMenuItem2
             // 
-            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.sobreToolStripMenuItem.Text = "Sobre";
+            this.cadastrarNovoToolStripMenuItem2.Name = "cadastrarNovoToolStripMenuItem2";
+            this.cadastrarNovoToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarNovoToolStripMenuItem2.Text = "Cadastrar Nova";
+            this.cadastrarNovoToolStripMenuItem2.Click += new System.EventHandler(this.cadastrarNovoToolStripMenuItem2_Click);
+            // 
+            // consultarTurmasToolStripMenuItem
+            // 
+            this.consultarTurmasToolStripMenuItem.Name = "consultarTurmasToolStripMenuItem";
+            this.consultarTurmasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarTurmasToolStripMenuItem.Text = "Consultar Turmas";
             // 
             // cadastroDeConvêniosToolStripMenuItem
             // 
@@ -136,14 +155,41 @@
             this.cadastroDeConvêniosToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.cadastroDeConvêniosToolStripMenuItem.Text = "Cadastro de Convênios";
             // 
-            // cadastroDeTurmasToolStripMenuItem
+            // cadastrarNovoToolStripMenuItem1
             // 
-            this.cadastroDeTurmasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarNovoToolStripMenuItem2,
-            this.consultarTurmasToolStripMenuItem});
-            this.cadastroDeTurmasToolStripMenuItem.Name = "cadastroDeTurmasToolStripMenuItem";
-            this.cadastroDeTurmasToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.cadastroDeTurmasToolStripMenuItem.Text = "Cadastro de Turmas";
+            this.cadastrarNovoToolStripMenuItem1.Name = "cadastrarNovoToolStripMenuItem1";
+            this.cadastrarNovoToolStripMenuItem1.Size = new System.Drawing.Size(184, 22);
+            this.cadastrarNovoToolStripMenuItem1.Text = "Cadastrar Novo";
+            this.cadastrarNovoToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarNovoToolStripMenuItem1_Click);
+            // 
+            // consultarConvêniosToolStripMenuItem
+            // 
+            this.consultarConvêniosToolStripMenuItem.Name = "consultarConvêniosToolStripMenuItem";
+            this.consultarConvêniosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.consultarConvêniosToolStripMenuItem.Text = "Consultar Convênios";
+            // 
+            // cadastroDeUsuáriosToolStripMenuItem
+            // 
+            this.cadastroDeUsuáriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarNovoToolStripMenuItem,
+            this.consultarUsuárioToolStripMenuItem});
+            this.cadastroDeUsuáriosToolStripMenuItem.Name = "cadastroDeUsuáriosToolStripMenuItem";
+            this.cadastroDeUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.cadastroDeUsuáriosToolStripMenuItem.Text = "Cadastro de Usuários";
+            // 
+            // cadastrarNovoToolStripMenuItem
+            // 
+            this.cadastrarNovoToolStripMenuItem.Name = "cadastrarNovoToolStripMenuItem";
+            this.cadastrarNovoToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.cadastrarNovoToolStripMenuItem.Text = "Cadastrar Novo";
+            this.cadastrarNovoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoToolStripMenuItem_Click);
+            // 
+            // consultarUsuárioToolStripMenuItem
+            // 
+            this.consultarUsuárioToolStripMenuItem.Name = "consultarUsuárioToolStripMenuItem";
+            this.consultarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.consultarUsuárioToolStripMenuItem.Text = "Consultar Usuários";
+            this.consultarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.consultarUsuárioToolStripMenuItem_Click);
             // 
             // gestãoToolStripMenuItem
             // 
@@ -156,7 +202,7 @@
             // controleDeTurmasToolStripMenuItem
             // 
             this.controleDeTurmasToolStripMenuItem.Name = "controleDeTurmasToolStripMenuItem";
-            this.controleDeTurmasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.controleDeTurmasToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.controleDeTurmasToolStripMenuItem.Text = "Controle de Turmas";
             // 
             // ferramentasToolStripMenuItem
@@ -171,62 +217,20 @@
             // calendarioToolStripMenuItem
             // 
             this.calendarioToolStripMenuItem.Name = "calendarioToolStripMenuItem";
-            this.calendarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calendarioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.calendarioToolStripMenuItem.Text = "Calendario";
             // 
             // calculadoraToolStripMenuItem
             // 
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.calculadoraToolStripMenuItem.Text = "Calculadora";
             // 
-            // cadastrarNovoToolStripMenuItem1
+            // sobreToolStripMenuItem
             // 
-            this.cadastrarNovoToolStripMenuItem1.Name = "cadastrarNovoToolStripMenuItem1";
-            this.cadastrarNovoToolStripMenuItem1.Size = new System.Drawing.Size(184, 22);
-            this.cadastrarNovoToolStripMenuItem1.Text = "Cadastrar Novo";
-            // 
-            // consultarConvêniosToolStripMenuItem
-            // 
-            this.consultarConvêniosToolStripMenuItem.Name = "consultarConvêniosToolStripMenuItem";
-            this.consultarConvêniosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.consultarConvêniosToolStripMenuItem.Text = "Consultar Convênios";
-            // 
-            // cadastrarNovoToolStripMenuItem2
-            // 
-            this.cadastrarNovoToolStripMenuItem2.Name = "cadastrarNovoToolStripMenuItem2";
-            this.cadastrarNovoToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.cadastrarNovoToolStripMenuItem2.Text = "Cadastrar Nova";
-            // 
-            // consultarTurmasToolStripMenuItem
-            // 
-            this.consultarTurmasToolStripMenuItem.Name = "consultarTurmasToolStripMenuItem";
-            this.consultarTurmasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultarTurmasToolStripMenuItem.Text = "Consultar Turmas";
-            // 
-            // cadastrarNovoToolStripMenuItem3
-            // 
-            this.cadastrarNovoToolStripMenuItem3.Name = "cadastrarNovoToolStripMenuItem3";
-            this.cadastrarNovoToolStripMenuItem3.Size = new System.Drawing.Size(188, 22);
-            this.cadastrarNovoToolStripMenuItem3.Text = "Cadastrar Novo";
-            // 
-            // consultarProfessorToolStripMenuItem
-            // 
-            this.consultarProfessorToolStripMenuItem.Name = "consultarProfessorToolStripMenuItem";
-            this.consultarProfessorToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.consultarProfessorToolStripMenuItem.Text = "Consultar Professores";
-            // 
-            // cadastrarNovoToolStripMenuItem4
-            // 
-            this.cadastrarNovoToolStripMenuItem4.Name = "cadastrarNovoToolStripMenuItem4";
-            this.cadastrarNovoToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
-            this.cadastrarNovoToolStripMenuItem4.Text = "Cadastrar Novo";
-            // 
-            // consultarAlunosToolStripMenuItem
-            // 
-            this.consultarAlunosToolStripMenuItem.Name = "consultarAlunosToolStripMenuItem";
-            this.consultarAlunosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultarAlunosToolStripMenuItem.Text = "Consultar Alunos";
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Text = "Sobre";
             // 
             // F_Gestao
             // 

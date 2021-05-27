@@ -72,6 +72,30 @@
     <Compile Include="F_BuscaUsuario.Designer.cs">
       <DependentUpon>F_BuscaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_CadAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_CadAluno.Designer.cs">
+      <DependentUpon>F_CadAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_CadConvenio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_CadConvenio.Designer.cs">
+      <DependentUpon>F_CadConvenio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_CadProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_CadProfessor.Designer.cs">
+      <DependentUpon>F_CadProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_CadTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_CadTurma.Designer.cs">
+      <DependentUpon>F_CadTurma.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_CadUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +156,18 @@
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="F_BuscaUsuario.resx">
       <DependentUpon>F_BuscaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_CadAluno.resx">
+      <DependentUpon>F_CadAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_CadConvenio.resx">
+      <DependentUpon>F_CadConvenio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_CadProfessor.resx">
+      <DependentUpon>F_CadProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_CadTurma.resx">
+      <DependentUpon>F_CadTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_CadUsuario.resx">
       <DependentUpon>F_CadUsuario.cs</DependentUpon>
@@ -195,6 +231,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="imgs\icon_database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\icon_search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
