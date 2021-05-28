@@ -65,9 +65,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aluno.cs" />
-    <Compile Include="Convenio.cs" />
-    <Compile Include="database.cs" />
+    <Compile Include="models\Aluno.cs" />
+    <Compile Include="models\Convenio.cs" />
+    <Compile Include="models\database.cs" />
     <Compile Include="F_BuscaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,10 +158,10 @@
     <Compile Include="F_ViewUsuario.Designer.cs">
       <DependentUpon>F_ViewUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Global.cs" />
+    <Compile Include="models\Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="models\Usuario.cs" />
     <EmbeddedResource Include="F_BuscaUsuario.resx">
       <DependentUpon>F_BuscaUsuario.cs</DependentUpon>
     </EmbeddedResource>
