@@ -21,5 +21,17 @@ namespace MyAcademy
         {
             this.Close();
         }
+
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            Convenio convenio = new Convenio();
+
+            convenio.nome = tbox_nome.Text;
+            convenio.perc_desconto = System.Convert.ToDouble(tbox_desconto.Text);
+            convenio.ativo = cbox_ativo.Text; 
+
+            Convenio.novoConvenio(convenio);
+            this.Close();
+        }
     }
 }

@@ -32,7 +32,7 @@ namespace MyAcademy
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_salvar = new System.Windows.Forms.Button();
             this.cbox_ativo = new System.Windows.Forms.ComboBox();
-            this.tbox_apelido = new System.Windows.Forms.TextBox();
+            this.tbox_desconto = new System.Windows.Forms.TextBox();
             this.tbox_nome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,6 +65,7 @@ namespace MyAcademy
             this.btn_salvar.TabIndex = 24;
             this.btn_salvar.Text = "Salvar";
             this.btn_salvar.UseVisualStyleBackColor = false;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // cbox_ativo
             // 
@@ -79,13 +80,13 @@ namespace MyAcademy
             this.cbox_ativo.TabIndex = 33;
             this.cbox_ativo.Text = "Sim";
             // 
-            // tbox_apelido
+            // tbox_desconto
             // 
-            this.tbox_apelido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tbox_apelido.Location = new System.Drawing.Point(15, 83);
-            this.tbox_apelido.Name = "tbox_apelido";
-            this.tbox_apelido.Size = new System.Drawing.Size(67, 20);
-            this.tbox_apelido.TabIndex = 31;
+            this.tbox_desconto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tbox_desconto.Location = new System.Drawing.Point(15, 83);
+            this.tbox_desconto.Name = "tbox_desconto";
+            this.tbox_desconto.Size = new System.Drawing.Size(67, 20);
+            this.tbox_desconto.TabIndex = 31;
             // 
             // tbox_nome
             // 
@@ -127,7 +128,7 @@ namespace MyAcademy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(324, 184);
             this.Controls.Add(this.cbox_ativo);
-            this.Controls.Add(this.tbox_apelido);
+            this.Controls.Add(this.tbox_desconto);
             this.Controls.Add(this.tbox_nome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -150,7 +151,7 @@ namespace MyAcademy
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.ComboBox cbox_ativo;
-        private System.Windows.Forms.TextBox tbox_apelido;
+        private System.Windows.Forms.TextBox tbox_desconto;
         private System.Windows.Forms.TextBox tbox_nome;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
