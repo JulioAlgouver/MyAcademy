@@ -45,6 +45,8 @@ namespace MyAcademy
             this.cbox_possuiConvenio = new System.Windows.Forms.ComboBox();
             this.PossuiConvenio = new System.Windows.Forms.Label();
             this.btn_bucarHorario = new System.Windows.Forms.Button();
+            this.tbox_idConvenio = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_cancelar
@@ -154,11 +156,12 @@ namespace MyAcademy
             this.tbox_convenio.ReadOnly = true;
             this.tbox_convenio.Size = new System.Drawing.Size(126, 20);
             this.tbox_convenio.TabIndex = 53;
+            this.tbox_convenio.TextChanged += new System.EventHandler(this.tbox_convenio_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(152, 66);
+            this.label6.Location = new System.Drawing.Point(156, 66);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 13);
             this.label6.TabIndex = 52;
@@ -200,11 +203,32 @@ namespace MyAcademy
             this.btn_bucarHorario.UseVisualStyleBackColor = true;
             this.btn_bucarHorario.Click += new System.EventHandler(this.btn_bucarHorario_Click);
             // 
+            // tbox_idConvenio
+            // 
+            this.tbox_idConvenio.Location = new System.Drawing.Point(128, 83);
+            this.tbox_idConvenio.Name = "tbox_idConvenio";
+            this.tbox_idConvenio.ReadOnly = true;
+            this.tbox_idConvenio.Size = new System.Drawing.Size(28, 20);
+            this.tbox_idConvenio.TabIndex = 57;
+            this.tbox_idConvenio.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(132, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 13);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "ID";
+            this.label2.Visible = false;
+            // 
             // F_CadAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(321, 224);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbox_idConvenio);
             this.Controls.Add(this.cbox_possuiConvenio);
             this.Controls.Add(this.PossuiConvenio);
             this.Controls.Add(this.btn_bucarHorario);
@@ -242,9 +266,11 @@ namespace MyAcademy
         private System.Windows.Forms.MaskedTextBox tbox_telefone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_bucarHorario;
-        private System.Windows.Forms.TextBox tbox_convenio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbox_possuiConvenio;
         private System.Windows.Forms.Label PossuiConvenio;
+        public System.Windows.Forms.TextBox tbox_idConvenio;
+        public System.Windows.Forms.TextBox tbox_convenio;
+        private System.Windows.Forms.Label label2;
     }
 }

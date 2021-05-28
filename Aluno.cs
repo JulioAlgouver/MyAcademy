@@ -19,14 +19,15 @@ namespace MyAcademy
             return conexao;
         }
 
-        public static Int32 codigo;
-        public static string nome;
-        public static string telefone;
-        public static string celular;
-        public static string possuiConvenio;
-        public static string nomeConvenio;
-        public static string ativo;
-        public static DateTime dataCdastro = DateTime.Now.Date;
+        public Int32 codigo;
+        public string nome;
+        public string telefone;
+        public string celular;
+        public Int32 idConvenio;
+        public string possuiConvenio;
+        public string nomeConvenio;
+        public string ativo;
+        public DateTime dataCdastro = DateTime.Now.Date;
 
         public static void novoAluno(Aluno aluno)
         {
@@ -39,6 +40,7 @@ namespace MyAcademy
                                                         TELEFONE, 
                                                         CELULAR, 
                                                         POSSUI_CONVENIO, 
+                                                        ID_CONVENIO,
                                                         NOME_CONVENIO, 
                                                         ATIVO, 
                                                         DATA_CADASTRO)
@@ -46,6 +48,7 @@ namespace MyAcademy
                                             @telefone,
                                             @celular,
                                             @possuiConvenio,
+                                            @idConvenio,
                                             @nomeConvenio,
                                             @ativo,
                                             @dataCadastro)";
@@ -54,6 +57,7 @@ namespace MyAcademy
                 cmd.Parameters.AddWithValue("@telefone", aluno.telefone);
                 cmd.Parameters.AddWithValue("@celular", aluno.celular);
                 cmd.Parameters.AddWithValue("@possuiConvenio", aluno.possuiConvenio);
+                cmd.Parameters.AddWithValue("@idConvenio", aluno.idConvenio);
                 cmd.Parameters.AddWithValue("@nomeConvenio", aluno.nomeConvenio);
                 cmd.Parameters.AddWithValue("@ativo", aluno.ativo);
                 cmd.Parameters.AddWithValue("@dataCadastro", aluno.dataCdastro);

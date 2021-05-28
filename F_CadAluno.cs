@@ -12,10 +12,16 @@ namespace MyAcademy
 {
     public partial class F_CadAluno : Form
     {
+        public int idConvenioSelecionado;
+        public string nomeConvenioSelecionado;
+
         public F_CadAluno()
         {
             InitializeComponent();
-        }
+
+            tbox_idConvenio.Text = idConvenioSelecionado.ToString();
+            tbox_convenio.Text = nomeConvenioSelecionado;
+    }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
@@ -30,6 +36,7 @@ namespace MyAcademy
             aluno.celular = tbox_celular.Text;
             aluno.ativo = cbox_ativo.Text;
             aluno.possuiConvenio = cbox_possuiConvenio.Text;
+            aluno.idConvenio = Int32.Parse(tbox_idConvenio.Text);
             aluno.nomeConvenio = tbox_convenio.Text;
 
             Aluno.novoAluno(aluno);
@@ -56,8 +63,13 @@ namespace MyAcademy
 
         private void btn_bucarHorario_Click(object sender, EventArgs e)
         {
-            F_GridConvenios gridConvenios = new F_GridConvenios();
+            F_GridConvenios gridConvenios = new F_GridConvenios(tbox_convenio.Text,tbox_idConvenio.Text,this);
             gridConvenios.ShowDialog();
+        }
+
+        private void tbox_convenio_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
