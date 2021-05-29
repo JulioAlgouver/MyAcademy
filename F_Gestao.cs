@@ -52,5 +52,11 @@ namespace MyAcademy
             F_CadAluno cadAluno = new F_CadAluno();
             cadAluno.ShowDialog();
         }
+
+        private void novoHorarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_CadHorario cadHorario = new F_CadHorario();
+            cadHorario.ShowDialog();
+        }
     }
 }

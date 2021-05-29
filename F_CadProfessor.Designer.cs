@@ -36,13 +36,13 @@ namespace MyAcademy
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.tbox_especialidade = new System.Windows.Forms.TextBox();
+            this.tbox_telefone = new System.Windows.Forms.MaskedTextBox();
+            this.tbox_celular = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cbox_ativo = new System.Windows.Forms.ComboBox();
+            this.tbox_horario = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_bucarHorario = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -59,6 +59,7 @@ namespace MyAcademy
             this.btn_cancelar.TabIndex = 29;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_salvar
             // 
@@ -72,6 +73,7 @@ namespace MyAcademy
             this.btn_salvar.TabIndex = 28;
             this.btn_salvar.Text = "Salvar";
             this.btn_salvar.UseVisualStyleBackColor = false;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // tbox_nome
             // 
@@ -107,28 +109,28 @@ namespace MyAcademy
             this.label3.TabIndex = 34;
             this.label3.Text = "Telefone";
             // 
-            // textBox1
+            // tbox_especialidade
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
-            this.textBox1.TabIndex = 35;
+            this.tbox_especialidade.Location = new System.Drawing.Point(15, 82);
+            this.tbox_especialidade.Name = "tbox_especialidade";
+            this.tbox_especialidade.Size = new System.Drawing.Size(147, 20);
+            this.tbox_especialidade.TabIndex = 35;
             // 
-            // maskedTextBox1
+            // tbox_telefone
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(176, 82);
-            this.maskedTextBox1.Mask = "(99) 0000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(126, 20);
-            this.maskedTextBox1.TabIndex = 37;
+            this.tbox_telefone.Location = new System.Drawing.Point(176, 82);
+            this.tbox_telefone.Mask = "(99) 0000-0000";
+            this.tbox_telefone.Name = "tbox_telefone";
+            this.tbox_telefone.Size = new System.Drawing.Size(126, 20);
+            this.tbox_telefone.TabIndex = 37;
             // 
-            // maskedTextBox2
+            // tbox_celular
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(176, 130);
-            this.maskedTextBox2.Mask = "(99) 00000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(126, 20);
-            this.maskedTextBox2.TabIndex = 39;
+            this.tbox_celular.Location = new System.Drawing.Point(176, 130);
+            this.tbox_celular.Mask = "(99) 00000-0000";
+            this.tbox_celular.Name = "tbox_celular";
+            this.tbox_celular.Size = new System.Drawing.Size(126, 20);
+            this.tbox_celular.TabIndex = 39;
             // 
             // label4
             // 
@@ -148,26 +150,26 @@ namespace MyAcademy
             this.label5.TabIndex = 40;
             this.label5.Text = "Ativo";
             // 
-            // comboBox1
+            // cbox_ativo
             // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbox_ativo.Enabled = false;
+            this.cbox_ativo.FormattingEnabled = true;
+            this.cbox_ativo.Items.AddRange(new object[] {
             "Sim",
             "Não"});
-            this.comboBox1.Location = new System.Drawing.Point(231, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(71, 21);
-            this.comboBox1.TabIndex = 41;
-            this.comboBox1.Text = "Sim";
+            this.cbox_ativo.Location = new System.Drawing.Point(231, 33);
+            this.cbox_ativo.Name = "cbox_ativo";
+            this.cbox_ativo.Size = new System.Drawing.Size(71, 21);
+            this.cbox_ativo.TabIndex = 41;
+            this.cbox_ativo.Text = "Sim";
             // 
-            // textBox4
+            // tbox_horario
             // 
-            this.textBox4.Location = new System.Drawing.Point(15, 130);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(126, 20);
-            this.textBox4.TabIndex = 43;
+            this.tbox_horario.Location = new System.Drawing.Point(15, 130);
+            this.tbox_horario.Name = "tbox_horario";
+            this.tbox_horario.ReadOnly = true;
+            this.tbox_horario.Size = new System.Drawing.Size(126, 20);
+            this.tbox_horario.TabIndex = 43;
             // 
             // label6
             // 
@@ -189,21 +191,22 @@ namespace MyAcademy
             this.btn_bucarHorario.Size = new System.Drawing.Size(20, 20);
             this.btn_bucarHorario.TabIndex = 44;
             this.btn_bucarHorario.UseVisualStyleBackColor = true;
+            this.btn_bucarHorario.Click += new System.EventHandler(this.btn_bucarHorario_Click);
             // 
             // F_CadProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 230);
+            this.ClientSize = new System.Drawing.Size(318, 224);
             this.Controls.Add(this.btn_bucarHorario);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbox_horario);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbox_ativo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.tbox_celular);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbox_telefone);
+            this.Controls.Add(this.tbox_especialidade);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbox_nome);
@@ -227,14 +230,14 @@ namespace MyAcademy
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.TextBox tbox_especialidade;
+        private System.Windows.Forms.MaskedTextBox tbox_telefone;
+        private System.Windows.Forms.MaskedTextBox tbox_celular;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbox_ativo;
         private System.Windows.Forms.Button btn_bucarHorario;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbox_horario;
         private System.Windows.Forms.Label label6;
     }
 }
