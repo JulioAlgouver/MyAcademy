@@ -25,6 +25,7 @@ namespace MyAcademy
         public string especialidade;
         public string celular;
         public string telefone;
+        public Int32 idHorario;
         public string horario;
         public string ativo;
         public DateTime data_cadastro = DateTime.Now.Date;

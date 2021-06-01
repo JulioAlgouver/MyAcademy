@@ -1,7 +1,7 @@
 ﻿
 namespace MyAcademy
 {
-    partial class F_GridHorarios
+    partial class F_GridProfessores
     {
         /// <summary>
         /// Required designer variable.
@@ -29,39 +29,37 @@ namespace MyAcademy
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridHorarios = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.gridHorarios)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridHorarios
+            // dataGridView1
             // 
-            this.gridHorarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridHorarios.Location = new System.Drawing.Point(12, 12);
-            this.gridHorarios.Name = "gridHorarios";
-            this.gridHorarios.Size = new System.Drawing.Size(361, 161);
-            this.gridHorarios.TabIndex = 0;
-            this.gridHorarios.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridHorarios_CellContentDoubleClick);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(361, 161);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // F_GridHorarios
+            // F_GridProfessores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 185);
-            this.Controls.Add(this.gridHorarios);
+            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "F_GridHorarios";
+            this.Name = "F_GridProfessores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lista de Horários";
-            this.Load += new System.EventHandler(this.F_GridHorarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridHorarios)).EndInit();
+            this.Text = "Lista de Professores";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView gridHorarios;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

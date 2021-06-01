@@ -71,6 +71,12 @@
     <Compile Include="F_GridHorarios.Designer.cs">
       <DependentUpon>F_GridHorarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_GridProfessores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_GridProfessores.Designer.cs">
+      <DependentUpon>F_GridProfessores.cs</DependentUpon>
+    </Compile>
     <Compile Include="models\Aluno.cs" />
     <Compile Include="models\Convenio.cs" />
     <Compile Include="models\database.cs" />
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_GridHorarios.resx">
       <DependentUpon>F_GridHorarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_GridProfessores.resx">
+      <DependentUpon>F_GridProfessores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_GridUsuarios.resx">
       <DependentUpon>F_GridUsuarios.cs</DependentUpon>

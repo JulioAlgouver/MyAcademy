@@ -12,7 +12,7 @@ namespace MyAcademy
 {
     public partial class F_CadProfessor : Form
     {
-        public F_CadProfessor()
+        public F_CadProfessor(F_GridHorarios gridHorarios)
         {
             InitializeComponent();
         }
@@ -29,6 +29,7 @@ namespace MyAcademy
             professor.especialidade = tbox_especialidade.Text;
             professor.celular = tbox_celular.Text;
             professor.telefone = tbox_telefone.Text;
+            professor.idHorario = Int32.Parse(tbox_idHorario.Text);
             professor.horario = tbox_horario.Text;
             professor.ativo = cbox_ativo.Text;
             Professor.novoProfessor(professor);
@@ -36,9 +37,9 @@ namespace MyAcademy
             this.Close();
         }
 
-        private void btn_bucarHorario_Click(object sender, EventArgs e)
+        public void btn_bucarHorario_Click(object sender, EventArgs e)
         {
-            F_GridHorarios gridHorarios = new F_GridHorarios();
+            F_GridHorarios gridHorarios = new F_GridHorarios(this);
             gridHorarios.ShowDialog();
         }
     }

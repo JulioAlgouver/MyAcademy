@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace MyAcademy
 {
-    static class Program
+    public class Program
     {
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.

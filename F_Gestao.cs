@@ -12,9 +12,15 @@ namespace MyAcademy
 {
     public partial class F_Gestao : Form
     {
-        public F_Gestao()
+        F_GridHorarios GridHorarios;
+        F_CadProfessor FormCadProfessor;
+
+        public F_Gestao(F_GridHorarios gridHorarios, F_CadProfessor cadProfessor)
         {
             InitializeComponent();
+
+            GridHorarios = gridHorarios;
+            FormCadProfessor = cadProfessor;
         }
 
         private void cadastrarNovoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,13 +43,13 @@ namespace MyAcademy
 
         private void cadastrarNovoToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            F_CadTurma cadTurma = new F_CadTurma();
+            F_CadTurma cadTurma = new F_CadTurma(GridHorarios, FormCadProfessor);
             cadTurma.ShowDialog();
         }
 
         private void cadastrarNovoToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            F_CadProfessor cadProfessor = new F_CadProfessor();
+            F_CadProfessor cadProfessor = new F_CadProfessor(GridHorarios);
             cadProfessor.ShowDialog();
         }
 

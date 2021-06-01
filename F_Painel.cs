@@ -12,6 +12,9 @@ namespace MyAcademy
 {
     public partial class F_Painel : Form
     {
+        F_CadProfessor FormCadProfessor;
+        F_GridHorarios FormGridHorarios;
+
         public F_Painel()
         {
             InitializeComponent();
@@ -103,7 +106,7 @@ namespace MyAcademy
             {
                 if (Global.permite_acesso_gestao == "Sim")
                 {
-                    F_Gestao gestao = new F_Gestao();
+                    F_Gestao gestao = new F_Gestao(FormGridHorarios,FormCadProfessor);
                     gestao.ShowDialog();
                 }
                 else

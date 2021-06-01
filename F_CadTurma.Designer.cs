@@ -42,8 +42,8 @@ namespace MyAcademy
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.btn_buscarProfessor = new System.Windows.Forms.Button();
             this.btn_bucarHorario = new System.Windows.Forms.Button();
+            this.btn_buscarProfessor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_cancelar
@@ -58,6 +58,7 @@ namespace MyAcademy
             this.btn_cancelar.TabIndex = 27;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_salvar
             // 
@@ -71,6 +72,7 @@ namespace MyAcademy
             this.btn_salvar.TabIndex = 26;
             this.btn_salvar.Text = "Salvar";
             this.btn_salvar.UseVisualStyleBackColor = false;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // label1
             // 
@@ -161,18 +163,6 @@ namespace MyAcademy
             this.textBox4.Size = new System.Drawing.Size(158, 20);
             this.textBox4.TabIndex = 38;
             // 
-            // btn_buscarProfessor
-            // 
-            this.btn_buscarProfessor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscarProfessor.BackgroundImage")));
-            this.btn_buscarProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscarProfessor.FlatAppearance.BorderSize = 0;
-            this.btn_buscarProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_buscarProfessor.Location = new System.Drawing.Point(175, 84);
-            this.btn_buscarProfessor.Name = "btn_buscarProfessor";
-            this.btn_buscarProfessor.Size = new System.Drawing.Size(20, 21);
-            this.btn_buscarProfessor.TabIndex = 37;
-            this.btn_buscarProfessor.UseVisualStyleBackColor = true;
-            // 
             // btn_bucarHorario
             // 
             this.btn_bucarHorario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_bucarHorario.BackgroundImage")));
@@ -184,6 +174,20 @@ namespace MyAcademy
             this.btn_bucarHorario.Size = new System.Drawing.Size(20, 20);
             this.btn_bucarHorario.TabIndex = 39;
             this.btn_bucarHorario.UseVisualStyleBackColor = true;
+            this.btn_bucarHorario.Click += new System.EventHandler(this.btn_bucarHorario_Click);
+            // 
+            // btn_buscarProfessor
+            // 
+            this.btn_buscarProfessor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscarProfessor.BackgroundImage")));
+            this.btn_buscarProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscarProfessor.FlatAppearance.BorderSize = 0;
+            this.btn_buscarProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_buscarProfessor.Location = new System.Drawing.Point(175, 84);
+            this.btn_buscarProfessor.Name = "btn_buscarProfessor";
+            this.btn_buscarProfessor.Size = new System.Drawing.Size(20, 21);
+            this.btn_buscarProfessor.TabIndex = 37;
+            this.btn_buscarProfessor.UseVisualStyleBackColor = true;
+            this.btn_buscarProfessor.Click += new System.EventHandler(this.btn_buscarProfessor_Click);
             // 
             // F_CadTurma
             // 

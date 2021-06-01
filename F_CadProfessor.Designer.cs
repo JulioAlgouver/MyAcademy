@@ -45,6 +45,7 @@ namespace MyAcademy
             this.tbox_horario = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_bucarHorario = new System.Windows.Forms.Button();
+            this.tbox_idHorario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_cancelar
@@ -168,7 +169,7 @@ namespace MyAcademy
             this.tbox_horario.Location = new System.Drawing.Point(15, 130);
             this.tbox_horario.Name = "tbox_horario";
             this.tbox_horario.ReadOnly = true;
-            this.tbox_horario.Size = new System.Drawing.Size(126, 20);
+            this.tbox_horario.Size = new System.Drawing.Size(128, 20);
             this.tbox_horario.TabIndex = 43;
             // 
             // label6
@@ -193,11 +194,21 @@ namespace MyAcademy
             this.btn_bucarHorario.UseVisualStyleBackColor = true;
             this.btn_bucarHorario.Click += new System.EventHandler(this.btn_bucarHorario_Click);
             // 
+            // tbox_idHorario
+            // 
+            this.tbox_idHorario.Location = new System.Drawing.Point(15, 130);
+            this.tbox_idHorario.Name = "tbox_idHorario";
+            this.tbox_idHorario.ReadOnly = true;
+            this.tbox_idHorario.Size = new System.Drawing.Size(10, 20);
+            this.tbox_idHorario.TabIndex = 45;
+            this.tbox_idHorario.Visible = false;
+            // 
             // F_CadProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(318, 224);
+            this.Controls.Add(this.tbox_idHorario);
             this.Controls.Add(this.btn_bucarHorario);
             this.Controls.Add(this.tbox_horario);
             this.Controls.Add(this.label6);
@@ -237,7 +248,8 @@ namespace MyAcademy
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbox_ativo;
         private System.Windows.Forms.Button btn_bucarHorario;
-        private System.Windows.Forms.TextBox tbox_horario;
         private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.TextBox tbox_horario;
+        public System.Windows.Forms.TextBox tbox_idHorario;
     }
 }
