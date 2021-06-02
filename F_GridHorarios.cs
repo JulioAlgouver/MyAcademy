@@ -40,7 +40,7 @@ namespace MyAcademy
 
             int contLinhas = 0;
 
-            if(gridView.Rows.Count > contLinhas)
+            if(gridView.SelectedRows.Count > contLinhas)
             {
                 idHorarioSelecionado = Int32.Parse(gridView.SelectedRows[0].Cells[0].Value.ToString());
                 descricaoHorarioSelecionado = gridView.SelectedRows[0].Cells[1].Value.ToString();
