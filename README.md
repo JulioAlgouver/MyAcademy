@@ -15,6 +15,6 @@
 <h3> Informações básicas </h3>
 &nbsp&nbsp&nbsp&nbsp&nbsp Para testar o código basta clonar o diretorio para o Visual Studio 2019 e seguir os seguintes passos:</p>
 
-- Criar uma pasta com o nome *MyAcademy* no diretório C:/ e copiar o banco de dados **database.db** para essa pasta. *(C:\MyAcademy\database.db)*
+- Criar uma pasta com o nome *MyAcademy* no diretório C:\ e copiar o banco de dados **database.db** para essa pasta. *(C:\MyAcademy\database.db)*
 - Instalar a versão .NET Framework 4.71
 - Executar a aplicação, para efetuar login basta informar o usuario **ADMIN** e senha **ADMIN**.
