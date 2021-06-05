@@ -29,15 +29,33 @@ namespace MyAcademy
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridHorarios = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridHorarios)).BeginInit();
             this.SuspendLayout();
             // 
             // gridHorarios
             // 
+            this.gridHorarios.AllowUserToAddRows = false;
+            this.gridHorarios.AllowUserToDeleteRows = false;
+            this.gridHorarios.AllowUserToResizeColumns = false;
+            this.gridHorarios.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridHorarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridHorarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridHorarios.ColumnHeadersVisible = false;
             this.gridHorarios.Location = new System.Drawing.Point(12, 12);
+            this.gridHorarios.MultiSelect = false;
             this.gridHorarios.Name = "gridHorarios";
+            this.gridHorarios.ReadOnly = true;
+            this.gridHorarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.gridHorarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridHorarios.Size = new System.Drawing.Size(361, 161);
             this.gridHorarios.TabIndex = 0;
             this.gridHorarios.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridHorarios_CellContentDoubleClick);
@@ -62,6 +80,6 @@ namespace MyAcademy
 
         #endregion
 
-        private System.Windows.Forms.DataGridView gridHorarios;
+        public System.Windows.Forms.DataGridView gridHorarios;
     }
 }

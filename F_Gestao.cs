@@ -64,5 +64,11 @@ namespace MyAcademy
             F_CadHorario cadHorario = new F_CadHorario();
             cadHorario.ShowDialog();
         }
+
+        private void calendarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Calendar calendar = new F_Calendar();
+            calendar.Show();
+        }
     }
 }

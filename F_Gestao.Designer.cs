@@ -39,6 +39,9 @@
             this.cadastroDeTurmasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarNovoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarTurmasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroDeHorariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoHorarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarHorarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeConvêniosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarNovoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarConvêniosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,9 +54,6 @@
             this.calendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroDeHorariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novoHorarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarHorarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,14 +96,14 @@
             // cadastrarNovoToolStripMenuItem4
             // 
             this.cadastrarNovoToolStripMenuItem4.Name = "cadastrarNovoToolStripMenuItem4";
-            this.cadastrarNovoToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarNovoToolStripMenuItem4.Size = new System.Drawing.Size(165, 22);
             this.cadastrarNovoToolStripMenuItem4.Text = "Cadastrar Novo";
             this.cadastrarNovoToolStripMenuItem4.Click += new System.EventHandler(this.cadastrarNovoToolStripMenuItem4_Click);
             // 
             // consultarAlunosToolStripMenuItem
             // 
             this.consultarAlunosToolStripMenuItem.Name = "consultarAlunosToolStripMenuItem";
-            this.consultarAlunosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarAlunosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.consultarAlunosToolStripMenuItem.Text = "Consultar Alunos";
             // 
             // cadastroDeProfissionalToolStripMenuItem
@@ -140,15 +140,37 @@
             // cadastrarNovoToolStripMenuItem2
             // 
             this.cadastrarNovoToolStripMenuItem2.Name = "cadastrarNovoToolStripMenuItem2";
-            this.cadastrarNovoToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarNovoToolStripMenuItem2.Size = new System.Drawing.Size(167, 22);
             this.cadastrarNovoToolStripMenuItem2.Text = "Cadastrar Nova";
             this.cadastrarNovoToolStripMenuItem2.Click += new System.EventHandler(this.cadastrarNovoToolStripMenuItem2_Click);
             // 
             // consultarTurmasToolStripMenuItem
             // 
             this.consultarTurmasToolStripMenuItem.Name = "consultarTurmasToolStripMenuItem";
-            this.consultarTurmasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarTurmasToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.consultarTurmasToolStripMenuItem.Text = "Consultar Turmas";
+            // 
+            // cadastroDeHorariosToolStripMenuItem
+            // 
+            this.cadastroDeHorariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoHorarioToolStripMenuItem,
+            this.consultarHorarioToolStripMenuItem});
+            this.cadastroDeHorariosToolStripMenuItem.Name = "cadastroDeHorariosToolStripMenuItem";
+            this.cadastroDeHorariosToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.cadastroDeHorariosToolStripMenuItem.Text = "Cadastro de Horarios";
+            // 
+            // novoHorarioToolStripMenuItem
+            // 
+            this.novoHorarioToolStripMenuItem.Name = "novoHorarioToolStripMenuItem";
+            this.novoHorarioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.novoHorarioToolStripMenuItem.Text = "Cadastrar Novo";
+            this.novoHorarioToolStripMenuItem.Click += new System.EventHandler(this.novoHorarioToolStripMenuItem_Click);
+            // 
+            // consultarHorarioToolStripMenuItem
+            // 
+            this.consultarHorarioToolStripMenuItem.Name = "consultarHorarioToolStripMenuItem";
+            this.consultarHorarioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.consultarHorarioToolStripMenuItem.Text = "Consultar Horários";
             // 
             // cadastroDeConvêniosToolStripMenuItem
             // 
@@ -184,14 +206,14 @@
             // cadastrarNovoToolStripMenuItem
             // 
             this.cadastrarNovoToolStripMenuItem.Name = "cadastrarNovoToolStripMenuItem";
-            this.cadastrarNovoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarNovoToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.cadastrarNovoToolStripMenuItem.Text = "Cadastrar Novo";
             this.cadastrarNovoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarNovoToolStripMenuItem_Click);
             // 
             // consultarUsuárioToolStripMenuItem
             // 
             this.consultarUsuárioToolStripMenuItem.Name = "consultarUsuárioToolStripMenuItem";
-            this.consultarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.consultarUsuárioToolStripMenuItem.Text = "Consultar Usuários";
             this.consultarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.consultarUsuárioToolStripMenuItem_Click);
             // 
@@ -221,13 +243,14 @@
             // calendarioToolStripMenuItem
             // 
             this.calendarioToolStripMenuItem.Name = "calendarioToolStripMenuItem";
-            this.calendarioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.calendarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.calendarioToolStripMenuItem.Text = "Calendario";
+            this.calendarioToolStripMenuItem.Click += new System.EventHandler(this.calendarioToolStripMenuItem_Click);
             // 
             // calculadoraToolStripMenuItem
             // 
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.calculadoraToolStripMenuItem.Text = "Calculadora";
             // 
             // sobreToolStripMenuItem
@@ -235,28 +258,6 @@
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
-            // 
-            // cadastroDeHorariosToolStripMenuItem
-            // 
-            this.cadastroDeHorariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novoHorarioToolStripMenuItem,
-            this.consultarHorarioToolStripMenuItem});
-            this.cadastroDeHorariosToolStripMenuItem.Name = "cadastroDeHorariosToolStripMenuItem";
-            this.cadastroDeHorariosToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.cadastroDeHorariosToolStripMenuItem.Text = "Cadastro de Horarios";
-            // 
-            // novoHorarioToolStripMenuItem
-            // 
-            this.novoHorarioToolStripMenuItem.Name = "novoHorarioToolStripMenuItem";
-            this.novoHorarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.novoHorarioToolStripMenuItem.Text = "Cadastrar Novo";
-            this.novoHorarioToolStripMenuItem.Click += new System.EventHandler(this.novoHorarioToolStripMenuItem_Click);
-            // 
-            // consultarHorarioToolStripMenuItem
-            // 
-            this.consultarHorarioToolStripMenuItem.Name = "consultarHorarioToolStripMenuItem";
-            this.consultarHorarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultarHorarioToolStripMenuItem.Text = "Consultar Horários";
             // 
             // F_Gestao
             // 

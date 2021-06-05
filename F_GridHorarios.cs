@@ -49,7 +49,7 @@ namespace MyAcademy
 
                 FormCadProfesor.tbox_idHorario.Text = idHorarioSelecionado.ToString();
                 FormCadProfesor.tbox_horario.Text = descricaoHorarioSelecionado;
-
+                
                 this.Close();
             }
         }
