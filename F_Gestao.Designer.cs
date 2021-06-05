@@ -252,6 +252,7 @@
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
             this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.calculadoraToolStripMenuItem.Text = "Calculadora";
+            this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 

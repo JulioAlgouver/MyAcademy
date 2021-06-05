@@ -45,10 +45,10 @@ namespace MyAcademy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(241, 172);
             this.Controls.Add(this.monthCalendar1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "F_Calendar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "F_Calendar";
+            this.Text = "Calendario";
             this.ResumeLayout(false);
 
         }

@@ -68,7 +68,13 @@ namespace MyAcademy
         private void calendarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             F_Calendar calendar = new F_Calendar();
-            calendar.Show();
+            calendar.ShowDialog();
+        }
+
+        private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Calc calculadora = new F_Calc();
+            calculadora.ShowDialog();
         }
     }
 }

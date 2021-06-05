@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="F_Calc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Calc.Designer.cs">
+      <DependentUpon>F_Calc.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Calendar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_CadUsuario.resx">
       <DependentUpon>F_CadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Calc.resx">
+      <DependentUpon>F_Calc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Calendar.resx">
       <DependentUpon>F_Calendar.cs</DependentUpon>
