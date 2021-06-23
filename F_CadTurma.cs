@@ -25,7 +25,7 @@ namespace MyAcademy
 
         private void btn_bucarHorario_Click(object sender, EventArgs e)
         {
-            F_GridHorarios gridHorarios = new F_GridHorarios(FormCadProfesor);
+            F_GridHorarioOnCadTurma gridHorarios = new F_GridHorarioOnCadTurma(this);
             gridHorarios.ShowDialog();
         }
 

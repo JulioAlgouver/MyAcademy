@@ -107,6 +107,12 @@
     <Compile Include="F_Calendar.Designer.cs">
       <DependentUpon>F_Calendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_GridHorarioOnCadTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_GridHorarioOnCadTurma.Designer.cs">
+      <DependentUpon>F_GridHorarioOnCadTurma.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_GridHorarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_GridConvenios.resx">
       <DependentUpon>F_GridConvenios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_GridHorarioOnCadTurma.resx">
+      <DependentUpon>F_GridHorarioOnCadTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_GridHorarios.resx">
       <DependentUpon>F_GridHorarios.cs</DependentUpon>

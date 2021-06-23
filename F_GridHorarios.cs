@@ -13,6 +13,7 @@ namespace MyAcademy
     public partial class F_GridHorarios : Form
     {
         F_CadProfessor FormCadProfesor;
+        F_CadTurma FormCadTurma;
 
         public static int idHorarioSelecionado;
         public static string descricaoHorarioSelecionado;
@@ -52,6 +53,11 @@ namespace MyAcademy
                 
                 this.Close();
             }
+        }
+
+        public void gridHorarios_SelectHorarioOnFormCadTurma(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

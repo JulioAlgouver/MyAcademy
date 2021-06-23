@@ -41,9 +41,11 @@ namespace MyAcademy
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbox_horario = new System.Windows.Forms.TextBox();
             this.btn_bucarHorario = new System.Windows.Forms.Button();
             this.btn_buscarProfessor = new System.Windows.Forms.Button();
+            this.tbox_idHorario = new System.Windows.Forms.TextBox();
+            this.tbox_idProfessor = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_cancelar
@@ -155,13 +157,13 @@ namespace MyAcademy
             this.comboBox1.TabIndex = 36;
             this.comboBox1.Text = "Sim";
             // 
-            // textBox4
+            // tbox_horario
             // 
-            this.textBox4.Location = new System.Drawing.Point(15, 131);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(158, 20);
-            this.textBox4.TabIndex = 38;
+            this.tbox_horario.Location = new System.Drawing.Point(15, 131);
+            this.tbox_horario.Name = "tbox_horario";
+            this.tbox_horario.ReadOnly = true;
+            this.tbox_horario.Size = new System.Drawing.Size(158, 20);
+            this.tbox_horario.TabIndex = 38;
             // 
             // btn_bucarHorario
             // 
@@ -189,13 +191,31 @@ namespace MyAcademy
             this.btn_buscarProfessor.UseVisualStyleBackColor = true;
             this.btn_buscarProfessor.Click += new System.EventHandler(this.btn_buscarProfessor_Click);
             // 
+            // tbox_idHorario
+            // 
+            this.tbox_idHorario.Location = new System.Drawing.Point(15, 131);
+            this.tbox_idHorario.Name = "tbox_idHorario";
+            this.tbox_idHorario.Size = new System.Drawing.Size(20, 20);
+            this.tbox_idHorario.TabIndex = 40;
+            this.tbox_idHorario.Visible = false;
+            // 
+            // tbox_idProfessor
+            // 
+            this.tbox_idProfessor.Location = new System.Drawing.Point(15, 84);
+            this.tbox_idProfessor.Name = "tbox_idProfessor";
+            this.tbox_idProfessor.Size = new System.Drawing.Size(20, 20);
+            this.tbox_idProfessor.TabIndex = 41;
+            this.tbox_idProfessor.Visible = false;
+            // 
             // F_CadTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(319, 227);
+            this.Controls.Add(this.tbox_idProfessor);
+            this.Controls.Add(this.tbox_idHorario);
             this.Controls.Add(this.btn_bucarHorario);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbox_horario);
             this.Controls.Add(this.btn_buscarProfessor);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox3);
@@ -229,10 +249,12 @@ namespace MyAcademy
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_buscarProfessor;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button btn_bucarHorario;
+        public System.Windows.Forms.TextBox tbox_horario;
+        public System.Windows.Forms.TextBox tbox_idHorario;
+        public System.Windows.Forms.TextBox tbox_idProfessor;
+        public System.Windows.Forms.TextBox textBox3;
     }
 }
