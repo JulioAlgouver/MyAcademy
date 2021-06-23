@@ -76,5 +76,35 @@ namespace MyAcademy
             F_Calc calculadora = new F_Calc();
             calculadora.ShowDialog();
         }
+
+        private void consultarAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_BuscaAluno buscaAluno = new F_BuscaAluno();
+            buscaAluno.ShowDialog();
+        }
+
+        private void consultarProfessorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_BuscaProfessor buscaProfessor = new F_BuscaProfessor();
+            buscaProfessor.ShowDialog();
+        }
+
+        private void consultarTurmasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_BuscaTurma buscaTurma = new F_BuscaTurma();
+            buscaTurma.ShowDialog();
+        }
+
+        private void consultarHorarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_BuscaHorario buscaHorario = new F_BuscaHorario();
+            buscaHorario.ShowDialog();
+        }
+
+        private void consultarConvêniosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_BuscaConvenio buscaConvenio = new F_BuscaConvenio();
+            buscaConvenio.ShowDialog();
+        }
     }
 }

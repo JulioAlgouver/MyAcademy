@@ -65,6 +65,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="F_BuscaAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_BuscaAluno.Designer.cs">
+      <DependentUpon>F_BuscaAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_BuscaConvenio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_BuscaConvenio.Designer.cs">
+      <DependentUpon>F_BuscaConvenio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_BuscaHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_BuscaHorario.Designer.cs">
+      <DependentUpon>F_BuscaHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_BuscaProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_BuscaProfessor.Designer.cs">
+      <DependentUpon>F_BuscaProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_BuscaTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_BuscaTurma.Designer.cs">
+      <DependentUpon>F_BuscaTurma.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Calc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +225,21 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="models\Usuario.cs" />
+    <EmbeddedResource Include="F_BuscaAluno.resx">
+      <DependentUpon>F_BuscaAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_BuscaConvenio.resx">
+      <DependentUpon>F_BuscaConvenio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_BuscaHorario.resx">
+      <DependentUpon>F_BuscaHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_BuscaProfessor.resx">
+      <DependentUpon>F_BuscaProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_BuscaTurma.resx">
+      <DependentUpon>F_BuscaTurma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_BuscaUsuario.resx">
       <DependentUpon>F_BuscaUsuario.cs</DependentUpon>
     </EmbeddedResource>

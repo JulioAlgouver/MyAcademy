@@ -96,15 +96,16 @@
             // cadastrarNovoToolStripMenuItem4
             // 
             this.cadastrarNovoToolStripMenuItem4.Name = "cadastrarNovoToolStripMenuItem4";
-            this.cadastrarNovoToolStripMenuItem4.Size = new System.Drawing.Size(165, 22);
+            this.cadastrarNovoToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
             this.cadastrarNovoToolStripMenuItem4.Text = "Cadastrar Novo";
             this.cadastrarNovoToolStripMenuItem4.Click += new System.EventHandler(this.cadastrarNovoToolStripMenuItem4_Click);
             // 
             // consultarAlunosToolStripMenuItem
             // 
             this.consultarAlunosToolStripMenuItem.Name = "consultarAlunosToolStripMenuItem";
-            this.consultarAlunosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.consultarAlunosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarAlunosToolStripMenuItem.Text = "Consultar Alunos";
+            this.consultarAlunosToolStripMenuItem.Click += new System.EventHandler(this.consultarAlunosToolStripMenuItem_Click);
             // 
             // cadastroDeProfissionalToolStripMenuItem
             // 
@@ -127,6 +128,7 @@
             this.consultarProfessorToolStripMenuItem.Name = "consultarProfessorToolStripMenuItem";
             this.consultarProfessorToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.consultarProfessorToolStripMenuItem.Text = "Consultar Professores";
+            this.consultarProfessorToolStripMenuItem.Click += new System.EventHandler(this.consultarProfessorToolStripMenuItem_Click);
             // 
             // cadastroDeTurmasToolStripMenuItem
             // 
@@ -147,8 +149,9 @@
             // consultarTurmasToolStripMenuItem
             // 
             this.consultarTurmasToolStripMenuItem.Name = "consultarTurmasToolStripMenuItem";
-            this.consultarTurmasToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.consultarTurmasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarTurmasToolStripMenuItem.Text = "Consultar Turmas";
+            this.consultarTurmasToolStripMenuItem.Click += new System.EventHandler(this.consultarTurmasToolStripMenuItem_Click);
             // 
             // cadastroDeHorariosToolStripMenuItem
             // 
@@ -169,8 +172,9 @@
             // consultarHorarioToolStripMenuItem
             // 
             this.consultarHorarioToolStripMenuItem.Name = "consultarHorarioToolStripMenuItem";
-            this.consultarHorarioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.consultarHorarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarHorarioToolStripMenuItem.Text = "Consultar Horários";
+            this.consultarHorarioToolStripMenuItem.Click += new System.EventHandler(this.consultarHorarioToolStripMenuItem_Click);
             // 
             // cadastroDeConvêniosToolStripMenuItem
             // 
@@ -193,6 +197,7 @@
             this.consultarConvêniosToolStripMenuItem.Name = "consultarConvêniosToolStripMenuItem";
             this.consultarConvêniosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.consultarConvêniosToolStripMenuItem.Text = "Consultar Convênios";
+            this.consultarConvêniosToolStripMenuItem.Click += new System.EventHandler(this.consultarConvêniosToolStripMenuItem_Click);
             // 
             // cadastroDeUsuáriosToolStripMenuItem
             // 
@@ -243,7 +248,7 @@
             // calendarioToolStripMenuItem
             // 
             this.calendarioToolStripMenuItem.Name = "calendarioToolStripMenuItem";
-            this.calendarioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.calendarioToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.calendarioToolStripMenuItem.Text = "Calendario";
             this.calendarioToolStripMenuItem.Click += new System.EventHandler(this.calendarioToolStripMenuItem_Click);
             // 
@@ -251,7 +256,7 @@
             // 
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
             this.calculadoraToolStripMenuItem.ShowShortcutKeys = false;
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.calculadoraToolStripMenuItem.Text = "Calculadora";
             this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
             // 
