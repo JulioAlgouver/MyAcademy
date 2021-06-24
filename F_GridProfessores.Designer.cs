@@ -29,37 +29,58 @@ namespace MyAcademy
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.gridProfessores = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gridProfessores)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // gridProfessores
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(361, 161);
-            this.dataGridView1.TabIndex = 0;
+            this.gridProfessores.AllowUserToAddRows = false;
+            this.gridProfessores.AllowUserToDeleteRows = false;
+            this.gridProfessores.AllowUserToResizeColumns = false;
+            this.gridProfessores.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridProfessores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gridProfessores.ColumnHeadersVisible = false;
+            this.gridProfessores.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.gridProfessores.Location = new System.Drawing.Point(12, 12);
+            this.gridProfessores.MultiSelect = false;
+            this.gridProfessores.Name = "gridProfessores";
+            this.gridProfessores.ReadOnly = true;
+            this.gridProfessores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.gridProfessores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridProfessores.Size = new System.Drawing.Size(361, 161);
+            this.gridProfessores.TabIndex = 0;
+            this.gridProfessores.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProfessores_CellContentDoubleClick);
             // 
             // F_GridProfessores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 185);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridProfessores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "F_GridProfessores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Professores";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.F_GridProfessores_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridProfessores)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView gridProfessores;
     }
 }

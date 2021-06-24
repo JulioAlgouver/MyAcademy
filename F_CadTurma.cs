@@ -31,7 +31,7 @@ namespace MyAcademy
 
         private void btn_buscarProfessor_Click(object sender, EventArgs e)
         {
-            F_GridProfessores gridProfessores = new F_GridProfessores();
+            F_GridProfessores gridProfessores = new F_GridProfessores(this);
             gridProfessores.ShowDialog();
         }
 
@@ -42,7 +42,17 @@ namespace MyAcademy
 
         private void btn_salvar_Click(object sender, EventArgs e)
         {
+            Turma turma = new Turma();
+            turma.desc_turma = tbox_nomeTurma.Text;
+            turma.id_horario = Int32.Parse(tbox_idHorario.Text);
+            turma.desc_horario = tbox_horario.Text;
+            turma.id_professor = Int32.Parse(tbox_idProfessor.Text);
+            turma.nome_professor = tbox_professor.Text;
+            turma.limite_alunos = Int32.Parse(tbox_limiteAlunos.Text);
+            turma.ativo = cbox_ativo.Text;
+            Turma.novaTurma(turma);
 
+            this.Close();
         }
     }
 }

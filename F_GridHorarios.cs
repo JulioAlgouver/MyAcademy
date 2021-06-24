@@ -54,10 +54,5 @@ namespace MyAcademy
                 this.Close();
             }
         }
-
-        public void gridHorarios_SelectHorarioOnFormCadTurma(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

@@ -58,5 +58,28 @@ namespace MyAcademy
                 throw error;
             }
         }
+
+        public static DataTable obterProfessores()
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = @"SELECT CODIGO as 'CODIGO', NOME as 'Nome', ESPECIALIDADE as 'Especialidade', HORARIO as 'Horário' FROM PROFESSORES WHERE ATIVO = 'Sim'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Erro ao acessar lista de professores.", "Alerta!", MessageBoxButtons.OK);
+                throw error;
+            }
+        }
     }
 }

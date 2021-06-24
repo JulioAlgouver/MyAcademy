@@ -20,13 +20,31 @@ namespace MyAcademy
             return conexao;
         }
 
-        public static void novaTurma()
+        public Int32 codigo;
+        public string desc_turma;
+        public Int32 id_professor;
+        public string nome_professor;
+        public Int32 limite_alunos;
+        public Int32 id_horario;
+        public string desc_horario;
+        public string ativo;
+
+        public static void novaTurma(Turma turma)
         {
             try
             {
                 var vcon = conexaoBanco();
                 var cmd = vcon.CreateCommand();
-                cmd.CommandText = "";
+                cmd.CommandText = @"INSERT INTO TURMAS (DESC_TURMA, ID_PROFESSOR, NOME_PROFESSOR, LIMITE_ALUNOS, ID_HORARIO, DESC_HORARIO, ATIVO)
+                                  VALUES (@descricaoTurma,@idProfessor,@nomeProfessor,@limiteAlunos,@idHorario,@descricaoHorario,@ativo)";
+
+                cmd.Parameters.AddWithValue("@descricaoTurma", turma.desc_turma);
+                cmd.Parameters.AddWithValue("@idProfessor", turma.id_professor);
+                cmd.Parameters.AddWithValue("@nomeProfessor", turma.nome_professor);
+                cmd.Parameters.AddWithValue("@limiteAlunos", turma.limite_alunos);
+                cmd.Parameters.AddWithValue("@idHorario", turma.id_horario);
+                cmd.Parameters.AddWithValue("@descricaoHorario", turma.desc_horario);
+                cmd.Parameters.AddWithValue("@ativo", turma.ativo);
 
                 cmd.ExecuteNonQuery();
 
