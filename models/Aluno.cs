@@ -72,5 +72,170 @@ namespace MyAcademy
                 throw error;
             }
         }
+
+        public static DataTable listaAlunos()
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT CODIGO, NOME, TELEFONE, NOME_CONVENIO AS 'CONVÊNIO' FROM ALUNOS";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }
+            catch(Exception error)
+            {
+                throw error;
+            }
+        }
+
+        public static DataTable localizarAlunoAtivoPorID(string id)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM ALUNOS WHERE ATIVO = 'Sim' AND CODIGO ='" + id + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+
+            }catch(Exception error)
+            {
+                MessageBox.Show("Erro ao abrir cadastro", error.Message);
+                throw error;
+            }
+        }
+
+        public static DataTable localizarAlunoInativoPorID(string id)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM ALUNOS WHERE CODIGO ='" + id + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro ao abrir cadastro", error.Message);
+                throw error;
+            }
+        }
+
+        public static DataTable localizarAlunoAtivoPorNome(string nome)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM ALUNOS WHERE ATIVO = 'Sim' AND NOME ='" + nome + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro ao abrir cadastro", error.Message);
+                throw error;
+            }
+        }
+
+        public static DataTable localizarAlunoInativoPorNome(string nome)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM ALUNOS WHERE NOME ='" + nome + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro ao abrir cadastro", error.Message);
+                throw error;
+            }
+        }
+
+        public static DataTable localizarAlunoAtivoPorTelefone(string telefone)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM ALUNOS WHERE ATIVO = 'Sim' AND TELEFONE ='" + telefone + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro ao abrir cadastro", error.Message);
+                throw error;
+            }
+        }
+
+        public static DataTable localizarAlunoInativoPorTelefone(string telefone)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM ALUNOS WHERE TELEFONE ='" + telefone + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro ao abrir cadastro", error.Message);
+                throw error;
+            }
+        }
     }
 }

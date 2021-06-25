@@ -245,6 +245,8 @@ namespace MyAcademy
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_salvar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "F_CadAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Aluno";
