@@ -61,6 +61,7 @@ namespace MyAcademy
             this.gridAlunos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridAlunos.Size = new System.Drawing.Size(445, 240);
             this.gridAlunos.TabIndex = 1;
+            this.gridAlunos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAlunos_CellContentDoubleClick);
             // 
             // F_GridAlunos
             // 

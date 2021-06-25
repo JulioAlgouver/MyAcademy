@@ -26,5 +26,33 @@ namespace MyAcademy
             gridAlunos.Columns[2].Width = 110;
             gridAlunos.Columns[3].Width = 82;
         }
+
+        private void gridAlunos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = (DataGridView)sender;
+
+            int contLinhas = gridAlunos.Rows.Count;
+
+            if (contLinhas > 0)
+            {
+                DataTable dataTable = new DataTable();
+                string id = gridAlunos.SelectedRows[0].Cells[0].Value.ToString();
+                dataTable = Aluno.localizarAlunoInativoPorID(id);
+
+                F_ViewAluno viewAluno = new F_ViewAluno();
+
+                viewAluno.tbox_codigo.Text = dataTable.Rows[0].Field<Int64>("CODIGO").ToString();
+                viewAluno.tbox_nome.Text = dataTable.Rows[0].Field<string>("NOME").ToString();
+                viewAluno.tbox_telefone.Text = dataTable.Rows[0].Field<string>("TELEFONE").ToString();
+                viewAluno.cbox_possuiConvenio.Text = dataTable.Rows[0].Field<string>("POSSUI_CONVENIO").ToString();
+                viewAluno.tbox_idConvenio.Text = dataTable.Rows[0].Field<Int64>("ID_CONVENIO").ToString();
+                viewAluno.tbox_convenio.Text = dataTable.Rows[0].Field<string>("NOME_CONVENIO").ToString();
+                viewAluno.tbox_celular.Text = dataTable.Rows[0].Field<string>("CELULAR").ToString();
+                viewAluno.cbox_ativo.Text = dataTable.Rows[0].Field<string>("ATIVO").ToString();
+                viewAluno.ShowDialog();
+
+                this.Close();
+            }
+        }
     }
 }
