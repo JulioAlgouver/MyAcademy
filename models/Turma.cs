@@ -57,5 +57,145 @@ namespace MyAcademy
                 throw error;
             }
         }
+
+        public static DataTable atualizarTurma(Turma turma)
+        {
+            SQLiteDataAdapter dataAdapter = null;
+            DataTable dataTable = new DataTable();
+            try
+            {
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = @"UPDATE TURMAS SET CODIGO='" + turma.codigo +
+                                   "', DESC_TURMA='" + turma.desc_turma +
+                                   "', ID_PROFESSOR='" + turma.id_professor +
+                                   "', NOME_PROFESSOR='" + turma.nome_professor +
+                                   "', LIMITE_ALUNOS='" + turma.limite_alunos +
+                                   "', ID_HORARIO='" + turma.id_horario +
+                                   "', DESC_HORARIO='" + turma.desc_horario +
+                                   "', ATIVO='" + turma.ativo +
+                                   "' WHERE CODIGO=" + turma.codigo + ";";
+
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro ao atualizar cadastro", error.Message);
+                throw error;
+            }
+
+            return null;
+        }
+
+        public static DataTable obterTurmas()
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT CODIGO, DESC_TURMA AS 'DESCRIÇÃO', NOME_PROFESSOR AS 'PROFESSOR', DESC_HORARIO AS 'HORARIO' FROM TURMAS";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }catch (Exception error)
+            {
+                throw error;
+            }
+        }
+
+        public static DataTable localizarTurmaInativaPorID(string id)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM TURMAS WHERE CODIGO ='" + id + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }
+            catch (Exception error)
+            {
+                throw error;
+            }
+        }
+
+        public static DataTable localizarTurmaAtivaPorID(string id)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM TURMAS WHERE ATIVO = 'Sim' AND CODIGO ='"+id+"'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }
+            catch (Exception error)
+            {
+                throw error;
+            }
+        }
+
+        public static DataTable localizarTurmaInativaPorNome(string nome)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM TURMAS WHERE NOME ='"+nome+"'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }
+            catch (Exception error)
+            {
+                throw error;
+            }
+        }
+
+        public static DataTable localizarTurmaAtivaPorNome(string nome)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM TURMAS WHERE ATIVO ='Sim' AND NOME='"+nome+"'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }
+            catch (Exception error)
+            {
+                throw error;
+            }
+        }
     }
 }
