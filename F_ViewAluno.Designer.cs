@@ -144,7 +144,6 @@ namespace MyAcademy
             // 
             // cbox_ativo
             // 
-            this.cbox_ativo.Enabled = false;
             this.cbox_ativo.FormattingEnabled = true;
             this.cbox_ativo.Items.AddRange(new object[] {
             "Sim",

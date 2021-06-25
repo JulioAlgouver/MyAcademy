@@ -1,7 +1,7 @@
 ﻿
 namespace MyAcademy
 {
-    partial class F_GridConvenios
+    partial class F_GridConveniosOnFormBusca
     {
         /// <summary>
         /// Required designer variable.
@@ -40,6 +40,7 @@ namespace MyAcademy
             this.gridConvenios.AllowUserToDeleteRows = false;
             this.gridConvenios.AllowUserToResizeColumns = false;
             this.gridConvenios.AllowUserToResizeRows = false;
+            this.gridConvenios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -57,11 +58,10 @@ namespace MyAcademy
             this.gridConvenios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridConvenios.Size = new System.Drawing.Size(361, 161);
             this.gridConvenios.StandardTab = true;
-            this.gridConvenios.TabIndex = 0;
-            this.gridConvenios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridConvenios_CellContentClick);
+            this.gridConvenios.TabIndex = 1;
             this.gridConvenios.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridConvenios_CellContentDoubleClick);
             // 
-            // F_GridConvenios
+            // F_GridConveniosOnFormBusca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,10 +70,10 @@ namespace MyAcademy
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "F_GridConvenios";
+            this.Name = "F_GridConveniosOnFormBusca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lista de Convênios";
-            this.Load += new System.EventHandler(this.F_GridConvenios_Load);
+            this.Text = "Localizar Convenio";
+            this.Load += new System.EventHandler(this.F_GridConveniosOnFormBusca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridConvenios)).EndInit();
             this.ResumeLayout(false);
 

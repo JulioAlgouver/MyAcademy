@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyAcademy
 {
-    public partial class F_CadConvenio : Form
+    public partial class F_ViewConvenio : Form
     {
-        public F_CadConvenio()
+        public F_ViewConvenio()
         {
             InitializeComponent();
         }
@@ -25,12 +25,13 @@ namespace MyAcademy
         private void btn_salvar_Click(object sender, EventArgs e)
         {
             Convenio convenio = new Convenio();
-
+            convenio.codigo = Int32.Parse(tbox_codigo.Text);
             convenio.nome = tbox_nome.Text;
-            convenio.perc_desconto = System.Convert.ToDouble(tbox_desconto.Text);
+            convenio.perc_desconto = Int32.Parse(tbox_desconto.Text);
             convenio.ativo = cbox_ativo.Text;
+            Convenio.atualizarConvenio(convenio);
 
-            Convenio.novoConvenio(convenio);
+            MessageBox.Show("Cadastro atualizado com sucesso!");
             this.Close();
         }
     }

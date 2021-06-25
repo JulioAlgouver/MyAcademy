@@ -114,7 +114,7 @@ namespace MyAcademy
             }
             else
             {
-                if (checkBox1.Checked == true)
+                if (checkBox2.Checked == true)
                 {
                     try
                     {
@@ -193,7 +193,7 @@ namespace MyAcademy
             }
             else
             {
-                if (checkBox1.Checked == true)
+                if (checkBox3.Checked == true)
                 {
                     try
                     {

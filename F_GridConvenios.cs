@@ -59,5 +59,10 @@ namespace MyAcademy
                 this.Close();
             }
         }
+
+        private void gridConvenios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
