@@ -206,6 +206,7 @@ namespace MyAcademy
             this.btn_salvar.TabIndex = 59;
             this.btn_salvar.Text = "Salvar";
             this.btn_salvar.UseVisualStyleBackColor = false;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // btn_bucarHorario
             // 

@@ -73,6 +73,37 @@ namespace MyAcademy
             }
         }
 
+        public static DataTable atualizarAluno(Aluno aluno)
+        {
+            SQLiteDataAdapter dataAdapter = null;
+            DataTable dataTable = new DataTable();
+            try
+            {
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = @"UPDATE ALUNOS SET NOME='" + aluno.nome +
+                                   "', TELEFONE='" + aluno.telefone +
+                                   "', CELULAR='" + aluno.celular +
+                                   "', POSSUI_CONVENIO='" + aluno.possuiConvenio +
+                                   "', ID_CONVENIO='" + aluno.idConvenio +
+                                   "', NOME_CONVENIO='" + aluno.nomeConvenio +
+                                   "', ATIVO='" + aluno.ativo +
+                                   "' WHERE CODIGO=" + aluno.codigo + ";";
+
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro ao atualizar cadastro", error.Message);
+                throw error;
+            }
+
+            return null;
+        }
+
         public static DataTable listaAlunos()
         {
             try
