@@ -69,7 +69,7 @@ namespace MyAcademy
                         F_ViewConvenio viewConvenio = new F_ViewConvenio();
                         viewConvenio.tbox_codigo.Text = dataTable.Rows[0].Field<Int64>("CODIGO").ToString();
                         viewConvenio.tbox_nome.Text = dataTable.Rows[0].Field<string>("NOME").ToString();
-                        viewConvenio.tbox_desconto.Text = dataTable.Rows[0].Field<Int64>("PERC_DESCONTO").ToString();
+                        viewConvenio.tbox_desconto.Text = dataTable.Rows[0].Field<Double>("PERC_DESCONTO").ToString();
                         viewConvenio.cbox_ativo.Text = dataTable.Rows[0].Field<string>("ATIVO").ToString();
                         viewConvenio.ShowDialog();
                         this.Close();
