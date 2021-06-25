@@ -54,6 +54,37 @@ namespace MyAcademy
             }
         }
 
+        public static DataTable atualizarHorario(Horario horario)
+        {
+            SQLiteDataAdapter dataAdapter = null;
+            DataTable dataTable = new DataTable();
+            try
+            {
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = @"UPDATE HORARIOS SET ID_HORARIO='" + horario.id_horario +
+                                   "', DESC_HORARIO='" + horario.desc_horario +
+                                   "', HORA_INICIO='" + horario.hora_inicio +
+                                   "', HORA_FIM='" + horario.hora_fim +
+                                   "', ATIVO='" + horario.ativo +
+                                   "' WHERE ID_HORARIO=" + horario.id_horario + ";";
+
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Cadastro atualizado com sucesso!", "Alerta", MessageBoxButtons.OK);
+                vcon.Close();
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro ao atualizar cadastro", error.Message);
+                throw error;
+            }
+
+            return null;
+        }
+
         public static DataTable obterHorarios()
         {
             try
@@ -64,7 +95,7 @@ namespace MyAcademy
 
                     var vcon = conexaoBanco();
                     var cmd = vcon.CreateCommand();
-                    cmd.CommandText = @"SELECT ID_HORARIO as 'ID', DESC_HORARIO as 'Descrição', HORA_INICIO as 'Horário Inicial', HORA_FIM as 'Horário Final' FROM HORARIOS WHERE ATIVO = 'Sim'";
+                    cmd.CommandText = @"SELECT ID_HORARIO as 'CODIGO', DESC_HORARIO as 'Descrição', HORA_INICIO as 'Horário Inicial', HORA_FIM as 'Horário Final' FROM HORARIOS WHERE ATIVO = 'Sim'";
                     dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
                     dataAdapter.Fill(dataTable);
                     vcon.Close();
@@ -75,6 +106,97 @@ namespace MyAcademy
             catch (Exception error)
             {
                 MessageBox.Show("Erro ao acessar lista de horários.", "Alerta!", MessageBoxButtons.OK);
+                throw error;
+            }
+        }
+
+        public static DataTable localizarHorarioInativoPorID(string id)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM HORARIOS WHERE ID_HORARIO ='" + id+"'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText,vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+
+            }catch(Exception error)
+            {
+                throw error;
+            }
+        }
+
+        public static DataTable localizarHorarioAtivoPorID(string id)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM HORARIOS WHERE ATIVO = 'Sim' AND ID_HORARIO ='" + id + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+
+            }
+            catch (Exception error)
+            {
+                throw error;
+            }
+        }
+
+        public static DataTable localizarHorarioInativoPorNome(string nome)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM HORARIOS WHERE DESC_HORARIO ='" + nome + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+
+            }
+            catch (Exception error)
+            {
+                throw error;
+            }
+        }
+
+        public static DataTable localizarHorarioAtivoPorNome(string nome)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM HORARIOS WHERE ATIVO = 'Sim' AND DESC_HORARIO ='" + nome + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+
+            }
+            catch (Exception error)
+            {
                 throw error;
             }
         }

@@ -93,7 +93,6 @@ namespace MyAcademy
                 dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
                 cmd.ExecuteNonQuery();
                 vcon.Close();
-
             }
             catch (Exception error)
             {

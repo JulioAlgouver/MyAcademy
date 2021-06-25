@@ -41,15 +41,9 @@ namespace MyAcademy
             this.tbox_nome = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.tab_apelidoUsuario = new System.Windows.Forms.TabPage();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.tbox_apelido = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.TabControl1.SuspendLayout();
             this.tab_codigoUsuario.SuspendLayout();
             this.tab_nomeUsuario.SuspendLayout();
-            this.tab_apelidoUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +59,6 @@ namespace MyAcademy
             // 
             this.TabControl1.Controls.Add(this.tab_codigoUsuario);
             this.TabControl1.Controls.Add(this.tab_nomeUsuario);
-            this.TabControl1.Controls.Add(this.tab_apelidoUsuario);
             this.TabControl1.Location = new System.Drawing.Point(18, 42);
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.SelectedIndex = 0;
@@ -111,6 +104,7 @@ namespace MyAcademy
             this.button1.TabIndex = 12;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -160,6 +154,7 @@ namespace MyAcademy
             this.button2.TabIndex = 10;
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -169,56 +164,6 @@ namespace MyAcademy
             this.label3.Size = new System.Drawing.Size(181, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Por favor, informe o nome do horário:";
-            // 
-            // tab_apelidoUsuario
-            // 
-            this.tab_apelidoUsuario.Controls.Add(this.checkBox3);
-            this.tab_apelidoUsuario.Controls.Add(this.tbox_apelido);
-            this.tab_apelidoUsuario.Controls.Add(this.button3);
-            this.tab_apelidoUsuario.Controls.Add(this.label4);
-            this.tab_apelidoUsuario.Location = new System.Drawing.Point(4, 22);
-            this.tab_apelidoUsuario.Name = "tab_apelidoUsuario";
-            this.tab_apelidoUsuario.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_apelidoUsuario.Size = new System.Drawing.Size(322, 133);
-            this.tab_apelidoUsuario.TabIndex = 2;
-            this.tab_apelidoUsuario.Text = "Apelido";
-            this.tab_apelidoUsuario.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(23, 64);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(139, 17);
-            this.checkBox3.TabIndex = 16;
-            this.checkBox3.Text = "Exibir cadastros inativos";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // tbox_apelido
-            // 
-            this.tbox_apelido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tbox_apelido.Location = new System.Drawing.Point(23, 40);
-            this.tbox_apelido.Name = "tbox_apelido";
-            this.tbox_apelido.Size = new System.Drawing.Size(276, 20);
-            this.tbox_apelido.TabIndex = 13;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(98, 87);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 35);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Por favor, informe o apelido do horário:";
             // 
             // F_BuscaHorario
             // 
@@ -238,8 +183,6 @@ namespace MyAcademy
             this.tab_codigoUsuario.PerformLayout();
             this.tab_nomeUsuario.ResumeLayout(false);
             this.tab_nomeUsuario.PerformLayout();
-            this.tab_apelidoUsuario.ResumeLayout(false);
-            this.tab_apelidoUsuario.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,10 +202,5 @@ namespace MyAcademy
         private System.Windows.Forms.TextBox tbox_nome;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TabPage tab_apelidoUsuario;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox tbox_apelido;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label4;
     }
 }

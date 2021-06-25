@@ -125,6 +125,12 @@
     <Compile Include="F_GridHorarioOnCadTurma.Designer.cs">
       <DependentUpon>F_GridHorarioOnCadTurma.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_GridHorarioOnFormBusca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_GridHorarioOnFormBusca.Designer.cs">
+      <DependentUpon>F_GridHorarioOnFormBusca.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_GridHorarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,12 @@
     </Compile>
     <Compile Include="F_ViewConvenio.Designer.cs">
       <DependentUpon>F_ViewConvenio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_ViewHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ViewHorario.Designer.cs">
+      <DependentUpon>F_ViewHorario.cs</DependentUpon>
     </Compile>
     <Compile Include="models\Aluno.cs" />
     <Compile Include="models\Convenio.cs" />
@@ -315,6 +327,9 @@
     <EmbeddedResource Include="F_GridHorarioOnCadTurma.resx">
       <DependentUpon>F_GridHorarioOnCadTurma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_GridHorarioOnFormBusca.resx">
+      <DependentUpon>F_GridHorarioOnFormBusca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_GridHorarios.resx">
       <DependentUpon>F_GridHorarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_ViewConvenio.resx">
       <DependentUpon>F_ViewConvenio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_ViewHorario.resx">
+      <DependentUpon>F_ViewHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_ViewUsuario.resx">
       <DependentUpon>F_ViewUsuario.cs</DependentUpon>

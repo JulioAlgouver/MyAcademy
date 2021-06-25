@@ -82,26 +82,21 @@ namespace MyAcademy
 
         public static void atualizarConvenio(Convenio convenio)
         {
+            SQLiteDataAdapter dataAdapter = null;
+            DataTable dataTable = new DataTable();
+
             try
             {
                 var vcon = conexaoBanco();
                 var cmd = vcon.CreateCommand();
-                cmd.CommandText = @"UPDATE CONVENIOS SET (NOME,
-                                                          PERC_DESCONTO,
-                                                          ATIVO,
-                                                          DATA_CADASTRO)
-                                    VALUES (@nome,
-                                            @perc_desconto,
-                                            @ativo,
-                                            @data_cadastro)";
+                cmd.CommandText = @"UPDATE CONVENIOS SET CODIGO='" + convenio.codigo +
+                                   "', NOME='" + convenio.nome +
+                                   "', PERC_DESCONTO='" + convenio.perc_desconto +
+                                   "', ATIVO='" + convenio.ativo +
+                                   "' WHERE CODIGO=" + convenio.codigo + ";";
 
-                cmd.Parameters.AddWithValue("@nome", convenio.nome);
-                cmd.Parameters.AddWithValue("@perc_desconto", convenio.perc_desconto);
-                cmd.Parameters.AddWithValue("@ativo", convenio.ativo);
-                cmd.Parameters.AddWithValue("@data_cadastro", convenio.data_cadastro);
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
                 cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Convênio atualizado com Sucesso!");
                 vcon.Close();
             }
             catch (Exception error)
