@@ -40,6 +40,10 @@
             this.btn_config = new System.Windows.Forms.Button();
             this.btn_financeiro = new System.Windows.Forms.Button();
             this.btn_gestao = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbox_led)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -132,7 +136,7 @@
             this.btn_database.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_database.FlatAppearance.BorderSize = 0;
             this.btn_database.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_database.Location = new System.Drawing.Point(542, 157);
+            this.btn_database.Location = new System.Drawing.Point(542, 97);
             this.btn_database.Name = "btn_database";
             this.btn_database.Size = new System.Drawing.Size(101, 99);
             this.btn_database.TabIndex = 5;
@@ -147,7 +151,7 @@
             this.btn_config.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_config.FlatAppearance.BorderSize = 0;
             this.btn_config.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_config.Location = new System.Drawing.Point(393, 157);
+            this.btn_config.Location = new System.Drawing.Point(393, 97);
             this.btn_config.Name = "btn_config";
             this.btn_config.Size = new System.Drawing.Size(101, 99);
             this.btn_config.TabIndex = 4;
@@ -162,7 +166,7 @@
             this.btn_financeiro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_financeiro.FlatAppearance.BorderSize = 0;
             this.btn_financeiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_financeiro.Location = new System.Drawing.Point(235, 157);
+            this.btn_financeiro.Location = new System.Drawing.Point(235, 97);
             this.btn_financeiro.Name = "btn_financeiro";
             this.btn_financeiro.Size = new System.Drawing.Size(101, 99);
             this.btn_financeiro.TabIndex = 3;
@@ -177,18 +181,62 @@
             this.btn_gestao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_gestao.FlatAppearance.BorderSize = 0;
             this.btn_gestao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_gestao.Location = new System.Drawing.Point(96, 157);
+            this.btn_gestao.Location = new System.Drawing.Point(96, 97);
             this.btn_gestao.Name = "btn_gestao";
             this.btn_gestao.Size = new System.Drawing.Size(101, 99);
             this.btn_gestao.TabIndex = 2;
             this.btn_gestao.UseVisualStyleBackColor = false;
             this.btn_gestao.Click += new System.EventHandler(this.btn_gestao_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Futura Bk BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(111, 212);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 18);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Gestão";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Futura Bk BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(257, 212);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 18);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Financeiro";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Futura Bk BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(389, 212);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 18);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Configurações";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Futura Bk BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(535, 212);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 18);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Banco de dados";
+            // 
             // F_Painel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 513);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_database);
             this.Controls.Add(this.btn_config);
             this.Controls.Add(this.btn_financeiro);
@@ -225,5 +273,9 @@
         private System.Windows.Forms.Button btn_financeiro;
         private System.Windows.Forms.Button btn_config;
         private System.Windows.Forms.Button btn_database;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

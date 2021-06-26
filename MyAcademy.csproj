@@ -137,11 +137,35 @@
     <Compile Include="F_GridHorarios.Designer.cs">
       <DependentUpon>F_GridHorarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_GridHorariosOnFormViewProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_GridHorariosOnFormViewProfessor.Designer.cs">
+      <DependentUpon>F_GridHorariosOnFormViewProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_GridHorariosOnFormViewTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_GridHorariosOnFormViewTurma.Designer.cs">
+      <DependentUpon>F_GridHorariosOnFormViewTurma.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_GridProfessores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="F_GridProfessores.Designer.cs">
       <DependentUpon>F_GridProfessores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_GridProfessoresOnFormBusca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_GridProfessoresOnFormBusca.Designer.cs">
+      <DependentUpon>F_GridProfessoresOnFormBusca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_GridProfessorOnFormViewTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_GridProfessorOnFormViewTurma.Designer.cs">
+      <DependentUpon>F_GridProfessorOnFormViewTurma.cs</DependentUpon>
     </Compile>
     <Compile Include="F_GridTurma.cs">
       <SubType>Form</SubType>
@@ -166,6 +190,12 @@
     </Compile>
     <Compile Include="F_ViewHorario.Designer.cs">
       <DependentUpon>F_ViewHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_ViewProfissional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ViewProfissional.Designer.cs">
+      <DependentUpon>F_ViewProfissional.cs</DependentUpon>
     </Compile>
     <Compile Include="F_ViewTurma.cs">
       <SubType>Form</SubType>
@@ -345,8 +375,20 @@
     <EmbeddedResource Include="F_GridHorarios.resx">
       <DependentUpon>F_GridHorarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_GridHorariosOnFormViewProfessor.resx">
+      <DependentUpon>F_GridHorariosOnFormViewProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_GridHorariosOnFormViewTurma.resx">
+      <DependentUpon>F_GridHorariosOnFormViewTurma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_GridProfessores.resx">
       <DependentUpon>F_GridProfessores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_GridProfessoresOnFormBusca.resx">
+      <DependentUpon>F_GridProfessoresOnFormBusca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_GridProfessorOnFormViewTurma.resx">
+      <DependentUpon>F_GridProfessorOnFormViewTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_GridTurma.resx">
       <DependentUpon>F_GridTurma.cs</DependentUpon>
@@ -368,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_ViewHorario.resx">
       <DependentUpon>F_ViewHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_ViewProfissional.resx">
+      <DependentUpon>F_ViewProfissional.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_ViewTurma.resx">
       <DependentUpon>F_ViewTurma.cs</DependentUpon>

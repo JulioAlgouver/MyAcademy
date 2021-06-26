@@ -24,13 +24,16 @@ namespace MyAcademy
 
         private void btn_buscarProfessor_Click(object sender, EventArgs e)
         {
-
+            F_GridProfessorOnFormViewTurma gridProfessores = new F_GridProfessorOnFormViewTurma(this);
+            gridProfessores.ShowDialog();
         }
 
         private void btn_bucarHorario_Click(object sender, EventArgs e)
         {
-
+            F_GridHorariosOnFormViewTurma gridHorarios = new F_GridHorariosOnFormViewTurma(this);
+            gridHorarios.ShowDialog();
         }
+
         private void btn_salvar_Click(object sender, EventArgs e)
         {
             Turma turma = new Turma();

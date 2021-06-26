@@ -59,6 +59,35 @@ namespace MyAcademy
             }
         }
 
+        public static DataTable atualizarProfessor(Professor professor)
+        {
+            SQLiteDataAdapter dataAdapter = null;
+            DataTable dataTable = new DataTable();
+            try
+            {
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = @"UPDATE ALUNOS SET NOME='" + professor.nome +
+                                   "', TELEFONE='" + professor.telefone +
+                                   "', CELULAR='" + professor.celular +
+                                   "', ESPECIALIDADE='" + professor.especialidade +
+                                   "', HORARIO='" + professor.horario +
+                                   "', ATIVO='" + professor.ativo +
+                                   "' WHERE CODIGO=" + professor.codigo + ";";
+
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro ao atualizar cadastro", error.Message);
+                throw error;
+            }
+
+            return null;
+        }
+
         public static DataTable obterProfessores()
         {
             try
@@ -78,6 +107,94 @@ namespace MyAcademy
             catch(Exception error)
             {
                 MessageBox.Show("Erro ao acessar lista de professores.", "Alerta!", MessageBoxButtons.OK);
+                throw error;
+            }
+        }
+
+        public static DataTable localizarProfessorInativoPorID(string id)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM PROFESSORES WHERE CODIGO ='"+id+"'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }
+            catch(Exception error)
+            {
+                throw error;
+            }
+        }
+
+        public static DataTable localizarProfessorAtivoPorID(string id)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM PROFESSORES WHERE ATIVO ='Sim' AND CODIGO ='" + id + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }
+            catch (Exception error)
+            {
+                throw error;
+            }
+        }
+
+        public static DataTable localizarProfessorInativoPorNome(string nome)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM PROFESSORES WHERE NOME ='" + nome + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }
+            catch (Exception error)
+            {
+                throw error;
+            }
+        }
+
+        public static DataTable localizarProfessorAtivoPorNome(string nome)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM PROFESSORES WHERE ATIVO ='Sim' AND NOME ='" + nome + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }
+            catch (Exception error)
+            {
                 throw error;
             }
         }
