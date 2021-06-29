@@ -267,5 +267,16 @@ namespace MyAcademy
                 throw error;
             }
         }
+
+        //FUNÇÃO DE MATRICULAR E REMOVER ALUNO DE TURMA
+        public static void matricularAluno()
+        {
+
+        }
+
+        public static void removerAluno()
+        {
+
+        }
     }
 }

@@ -197,5 +197,27 @@ namespace MyAcademy
                 throw error;
             }
         }
+
+        public static DataTable obterIdNomeTurma()
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT CODIGO, DESC_TURMA FROM TURMAS WHERE ATIVO = 'Sim'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+
+                return dataTable;
+
+            }catch(Exception error)
+            {
+                MessageBox.Show("Não foi possível obter listagem de turmas", "Erro", MessageBoxButtons.OK);
+                throw error;
+            }
+        }
     }
 }
