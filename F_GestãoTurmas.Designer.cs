@@ -29,23 +29,47 @@ namespace MyAcademy
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridAlunosMatriculados = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridTurmas = new System.Windows.Forms.DataGridView();
             this.btn_matricular = new System.Windows.Forms.Button();
             this.btn_remover = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridAlunosMatriculados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTurmas)).BeginInit();
             this.SuspendLayout();
             // 
             // gridAlunosMatriculados
             // 
+            this.gridAlunosMatriculados.AllowUserToAddRows = false;
+            this.gridAlunosMatriculados.AllowUserToDeleteRows = false;
+            this.gridAlunosMatriculados.AllowUserToResizeColumns = false;
+            this.gridAlunosMatriculados.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridAlunosMatriculados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridAlunosMatriculados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridAlunosMatriculados.Location = new System.Drawing.Point(272, 44);
+            this.gridAlunosMatriculados.MultiSelect = false;
             this.gridAlunosMatriculados.Name = "gridAlunosMatriculados";
+            this.gridAlunosMatriculados.ReadOnly = true;
+            this.gridAlunosMatriculados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridAlunosMatriculados.ShowCellErrors = false;
+            this.gridAlunosMatriculados.ShowCellToolTips = false;
+            this.gridAlunosMatriculados.ShowEditingIcon = false;
+            this.gridAlunosMatriculados.ShowRowErrors = false;
             this.gridAlunosMatriculados.Size = new System.Drawing.Size(250, 300);
+            this.gridAlunosMatriculados.StandardTab = true;
             this.gridAlunosMatriculados.TabIndex = 0;
+            this.gridAlunosMatriculados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAlunosMatriculados_CellContentClick);
+            this.gridAlunosMatriculados.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridAlunosMatriculados_CellContentDoubleClick);
             // 
             // label1
             // 
@@ -65,13 +89,35 @@ namespace MyAcademy
             this.label2.TabIndex = 2;
             this.label2.Text = "Selecione uma turma:";
             // 
-            // dataGridView1
+            // gridTurmas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(231, 124);
-            this.dataGridView1.TabIndex = 3;
+            this.gridTurmas.AllowUserToAddRows = false;
+            this.gridTurmas.AllowUserToDeleteRows = false;
+            this.gridTurmas.AllowUserToResizeColumns = false;
+            this.gridTurmas.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridTurmas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gridTurmas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridTurmas.Location = new System.Drawing.Point(16, 44);
+            this.gridTurmas.MultiSelect = false;
+            this.gridTurmas.Name = "gridTurmas";
+            this.gridTurmas.ReadOnly = true;
+            this.gridTurmas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridTurmas.ShowCellErrors = false;
+            this.gridTurmas.ShowCellToolTips = false;
+            this.gridTurmas.ShowEditingIcon = false;
+            this.gridTurmas.ShowRowErrors = false;
+            this.gridTurmas.Size = new System.Drawing.Size(231, 124);
+            this.gridTurmas.StandardTab = true;
+            this.gridTurmas.TabIndex = 3;
+            this.gridTurmas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTurmas_CellContentClick);
+            this.gridTurmas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTurmas_CellContentDoubleClick);
             // 
             // btn_matricular
             // 
@@ -107,7 +153,7 @@ namespace MyAcademy
             this.ClientSize = new System.Drawing.Size(534, 361);
             this.Controls.Add(this.btn_remover);
             this.Controls.Add(this.btn_matricular);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridTurmas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gridAlunosMatriculados);
@@ -117,20 +163,20 @@ namespace MyAcademy
             this.Name = "F_GestãoTurmas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestão de Turmas";
+            this.Load += new System.EventHandler(this.F_GestãoTurmas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridAlunosMatriculados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTurmas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView gridAlunosMatriculados;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_matricular;
         private System.Windows.Forms.Button btn_remover;
+        public System.Windows.Forms.DataGridView gridAlunosMatriculados;
+        public System.Windows.Forms.DataGridView gridTurmas;
     }
 }

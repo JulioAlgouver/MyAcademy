@@ -26,5 +26,30 @@ namespace MyAcademy
         {
 
         }
+
+        private void F_GestãoTurmas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridTurmas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gridAlunosMatriculados_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gridTurmas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gridAlunosMatriculados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
