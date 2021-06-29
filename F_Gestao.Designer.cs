@@ -67,7 +67,7 @@
             this.sobreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(9, 9);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(267, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(387, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -96,14 +96,14 @@
             // cadastrarNovoToolStripMenuItem4
             // 
             this.cadastrarNovoToolStripMenuItem4.Name = "cadastrarNovoToolStripMenuItem4";
-            this.cadastrarNovoToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarNovoToolStripMenuItem4.Size = new System.Drawing.Size(165, 22);
             this.cadastrarNovoToolStripMenuItem4.Text = "Cadastrar Novo";
             this.cadastrarNovoToolStripMenuItem4.Click += new System.EventHandler(this.cadastrarNovoToolStripMenuItem4_Click);
             // 
             // consultarAlunosToolStripMenuItem
             // 
             this.consultarAlunosToolStripMenuItem.Name = "consultarAlunosToolStripMenuItem";
-            this.consultarAlunosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarAlunosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.consultarAlunosToolStripMenuItem.Text = "Consultar Alunos";
             this.consultarAlunosToolStripMenuItem.Click += new System.EventHandler(this.consultarAlunosToolStripMenuItem_Click);
             // 
@@ -149,7 +149,7 @@
             // consultarTurmasToolStripMenuItem
             // 
             this.consultarTurmasToolStripMenuItem.Name = "consultarTurmasToolStripMenuItem";
-            this.consultarTurmasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarTurmasToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.consultarTurmasToolStripMenuItem.Text = "Consultar Turmas";
             this.consultarTurmasToolStripMenuItem.Click += new System.EventHandler(this.consultarTurmasToolStripMenuItem_Click);
             // 
@@ -172,7 +172,7 @@
             // consultarHorarioToolStripMenuItem
             // 
             this.consultarHorarioToolStripMenuItem.Name = "consultarHorarioToolStripMenuItem";
-            this.consultarHorarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarHorarioToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.consultarHorarioToolStripMenuItem.Text = "Consultar Horários";
             this.consultarHorarioToolStripMenuItem.Click += new System.EventHandler(this.consultarHorarioToolStripMenuItem_Click);
             // 
@@ -233,8 +233,9 @@
             // controleDeTurmasToolStripMenuItem
             // 
             this.controleDeTurmasToolStripMenuItem.Name = "controleDeTurmasToolStripMenuItem";
-            this.controleDeTurmasToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.controleDeTurmasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.controleDeTurmasToolStripMenuItem.Text = "Controle de Turmas";
+            this.controleDeTurmasToolStripMenuItem.Click += new System.EventHandler(this.controleDeTurmasToolStripMenuItem_Click);
             // 
             // ferramentasToolStripMenuItem
             // 

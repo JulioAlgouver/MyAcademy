@@ -107,6 +107,12 @@
     <Compile Include="F_Calendar.Designer.cs">
       <DependentUpon>F_Calendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_GestãoTurmas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_GestãoTurmas.Designer.cs">
+      <DependentUpon>F_GestãoTurmas.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_GridAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Gestao.resx">
       <DependentUpon>F_Gestao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_GestãoTurmas.resx">
+      <DependentUpon>F_GestãoTurmas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_GridAlunos.resx">
       <DependentUpon>F_GridAlunos.cs</DependentUpon>

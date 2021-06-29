@@ -106,5 +106,11 @@ namespace MyAcademy
             F_BuscaConvenio buscaConvenio = new F_BuscaConvenio();
             buscaConvenio.ShowDialog();
         }
+
+        private void controleDeTurmasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_GestãoTurmas gestaoTurmas = new F_GestãoTurmas();
+            gestaoTurmas.ShowDialog();
+        }
     }
 }
