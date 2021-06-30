@@ -207,7 +207,7 @@ namespace MyAcademy
 
                 var vcon = conexaoBanco();
                 var cmd = vcon.CreateCommand();
-                cmd.CommandText = "SELECT CODIGO, DESC_TURMA FROM TURMAS WHERE ATIVO = 'Sim'";
+                cmd.CommandText = "SELECT CODIGO, DESC_TURMA AS 'TURMA' FROM TURMAS WHERE ATIVO = 'Sim'";
                 dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
                 dataAdapter.Fill(dataTable);
 

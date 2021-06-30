@@ -60,6 +60,7 @@ namespace MyAcademy
             this.gridAlunosMatriculados.MultiSelect = false;
             this.gridAlunosMatriculados.Name = "gridAlunosMatriculados";
             this.gridAlunosMatriculados.ReadOnly = true;
+            this.gridAlunosMatriculados.RowHeadersVisible = false;
             this.gridAlunosMatriculados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridAlunosMatriculados.ShowCellErrors = false;
             this.gridAlunosMatriculados.ShowCellToolTips = false;
@@ -108,6 +109,7 @@ namespace MyAcademy
             this.gridTurmas.MultiSelect = false;
             this.gridTurmas.Name = "gridTurmas";
             this.gridTurmas.ReadOnly = true;
+            this.gridTurmas.RowHeadersVisible = false;
             this.gridTurmas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridTurmas.ShowCellErrors = false;
             this.gridTurmas.ShowCellToolTips = false;
