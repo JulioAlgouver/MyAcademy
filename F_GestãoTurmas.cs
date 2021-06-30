@@ -70,12 +70,12 @@ namespace MyAcademy
             viewAluno.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_remover_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_remover_Click(object sender, EventArgs e)
+        private void btn_matricular_Click(object sender, EventArgs e)
         {
 
         }

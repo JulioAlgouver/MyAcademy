@@ -119,6 +119,12 @@
     <Compile Include="F_GridAlunos.Designer.cs">
       <DependentUpon>F_GridAlunos.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_GridAlunosOnFormGestaoTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_GridAlunosOnFormGestaoTurma.Designer.cs">
+      <DependentUpon>F_GridAlunosOnFormGestaoTurma.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_GridConveniosOnFormBusca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_GridAlunos.resx">
       <DependentUpon>F_GridAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_GridAlunosOnFormGestaoTurma.resx">
+      <DependentUpon>F_GridAlunosOnFormGestaoTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_GridConvenios.resx">
       <DependentUpon>F_GridConvenios.cs</DependentUpon>
