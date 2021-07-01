@@ -12,9 +12,6 @@ namespace MyAcademy
 {
     public partial class F_GridAlunosOnFormGestaoTurma : Form
     {
-        int idAlunoSelecionado;
-        string nomeAlunoSelecionado;
-
         F_GestãoTurmas FormGestaoTurmas;
 
         public F_GridAlunosOnFormGestaoTurma(F_GestãoTurmas gestaoTurmas)
@@ -35,19 +32,21 @@ namespace MyAcademy
         }
         private void gridAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            idAlunoSelecionado = Int32.Parse(gridAlunos.Rows[0].Cells[0].Value.ToString());
-            nomeAlunoSelecionado = gridAlunos.Rows[0].Cells[1].Value.ToString();
+
         }
 
         private void btn_selecionar_Click(object sender, EventArgs e)
         {
             DataTable dataTable = new DataTable();
             Aluno aluno = new Aluno();
-            aluno.id_turma = ;
-            aluno.desc_turma = ;
-            aluno.id_aluno = idAlunoSelecionado;
-            aluno.nome_aluno = nomeAlunoSelecionado;
+            aluno.id_turma = Int32.Parse(FormGestaoTurmas.gridTurmas.SelectedRows[0].Cells[0].Value.ToString()); ;
+            aluno.desc_turma = FormGestaoTurmas.gridTurmas.SelectedRows[0].Cells[1].Value.ToString();
+            aluno.id_aluno = Int32.Parse(gridAlunos.SelectedRows[0].Cells[0].Value.ToString());
+            aluno.nome_aluno = gridAlunos.SelectedRows[0].Cells[1].Value.ToString();
             Aluno.matricularAluno(aluno);
+            this.Close();
+
+            FormGestaoTurmas.gridAlunosMatriculados.Refresh();
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)

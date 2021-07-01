@@ -286,7 +286,7 @@ namespace MyAcademy
 
             var vcon = conexaoBanco();
             var cmd = vcon.CreateCommand();
-            cmd.CommandText = @"INSERT INTO ALUNOS_TURMA (ID_TURMA, DESC_TURMA, ID_ALUNO, NOME_ALUNO, DATA_MATRTICULA)
+            cmd.CommandText = @"INSERT INTO ALUNOS_TURMA (ID_TURMA, DESC_TURMA, ID_ALUNO, NOME_ALUNO, DATA_MATRICULA)
                                                     VALUES (@id_turma, @desc_turma, @id_aluno, @nome_aluno, @data_matricula)";
             cmd.Parameters.AddWithValue("@id_turma", aluno.id_turma);
             cmd.Parameters.AddWithValue("@desc_turma", aluno.desc_turma);
@@ -294,8 +294,8 @@ namespace MyAcademy
             cmd.Parameters.AddWithValue("@nome_aluno", aluno.nome_aluno);
             cmd.Parameters.AddWithValue("@data_matricula", aluno.data_matricula);
             cmd.ExecuteNonQuery();
-            dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
-            dataAdapter.Fill(dataTable);
+
+            MessageBox.Show("Aluno matriculado com Sucesso!");
             vcon.Close();
         }
 
@@ -308,7 +308,7 @@ namespace MyAcademy
 
                 var vcon = conexaoBanco();
                 var cmd = vcon.CreateCommand();
-                cmd.CommandText = "SELECT ID_ALUNO AS 'CODIGO' , NOME_ALUNO AS 'NOME' FROM ALUNOS_TURMAS WHERE ID_TURMA ='"+id+"'";
+                cmd.CommandText = "SELECT ID_ALUNO AS 'CODIGO' , NOME_ALUNO AS 'NOME' FROM ALUNOS_TURMA WHERE ID_TURMA ='"+id+"'";
                 dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
                 dataAdapter.Fill(dataTable);
                 vcon.Close();

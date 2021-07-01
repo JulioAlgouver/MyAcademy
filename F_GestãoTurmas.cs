@@ -30,7 +30,7 @@ namespace MyAcademy
 
             
             DataTable dataTable = new DataTable();
-            string id = idTurmaSelecionada;
+            string id = gridTurmas.SelectedRows[0].Cells[0].Value.ToString();
             dataTable = Aluno.listarAlunosMatriculados(id);
             
             gridAlunosMatriculados.DataSource = Aluno.listarAlunosMatriculados(id);
@@ -39,15 +39,11 @@ namespace MyAcademy
         }
         private void gridTurmas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            idTurmaSelecionada = gridTurmas.Rows[0].Cells[0].Value.ToString();
-            nomeTurmaSelecionada = gridTurmas.Rows[0].Cells[1].Value.ToString();
-
             DataTable dataTable = new DataTable();
-            string id = idTurmaSelecionada;
+            string id = gridTurmas.SelectedRows[0].Cells[0].Value.ToString();
             dataTable = Aluno.listarAlunosMatriculados(id);
 
             gridAlunosMatriculados.Refresh();
-
         }
 
         private void gridTurmas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -70,7 +66,7 @@ namespace MyAcademy
 
         private void gridAlunosMatriculados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            idAlunoSelecionado = gridAlunosMatriculados.Rows[0].Cells[0].Value.ToString();
+            
         }
 
         private void gridAlunosMatriculados_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -93,8 +89,7 @@ namespace MyAcademy
 
         private void btn_remover_Click(object sender, EventArgs e)
         {
-            Aluno.removerAluno(idAlunoSelecionado,idTurmaSelecionada);
-            gridAlunosMatriculados.Refresh();
+            Aluno.removerAluno(gridAlunosMatriculados.SelectedRows[0].Cells[0].Value.ToString(),gridTurmas.SelectedRows[0].Cells[0].Value.ToString());
             MessageBox.Show("Aluno removido da turma", "Aviso", MessageBoxButtons.OK);
         }
 
