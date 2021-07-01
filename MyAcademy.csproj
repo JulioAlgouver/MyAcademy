@@ -363,8 +363,14 @@
     <EmbeddedResource Include="F_Calendar.resx">
       <DependentUpon>F_Calendar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_Configuracao.resx">
+      <DependentUpon>F_Configuracao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Database.resx">
       <DependentUpon>F_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Financeiro.resx">
+      <DependentUpon>F_Financeiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Gestao.resx">
       <DependentUpon>F_Gestao.cs</DependentUpon>
