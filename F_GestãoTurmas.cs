@@ -12,6 +12,10 @@ namespace MyAcademy
 {
     public partial class F_GestãoTurmas : Form
     {
+        public static string idAlunoSelecionado;
+        public static string idTurmaSelecionada;
+        public static string nomeTurmaSelecionada;
+
         public F_GestãoTurmas()
         {
             InitializeComponent();
@@ -23,9 +27,26 @@ namespace MyAcademy
 
             gridTurmas.Columns[0].Width = 79;
             gridTurmas.Columns[1].Width = 149;
+
+            
+            DataTable dataTable = new DataTable();
+            string id = idTurmaSelecionada;
+            dataTable = Aluno.listarAlunosMatriculados(id);
+            
+            gridAlunosMatriculados.DataSource = Aluno.listarAlunosMatriculados(id);
+            gridAlunosMatriculados.Columns[0].Width = 80;
+            gridAlunosMatriculados.Columns[1].Width = 200;
         }
         private void gridTurmas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            idTurmaSelecionada = gridTurmas.Rows[0].Cells[0].Value.ToString();
+            nomeTurmaSelecionada = gridTurmas.Rows[0].Cells[1].Value.ToString();
+
+            DataTable dataTable = new DataTable();
+            string id = idTurmaSelecionada;
+            dataTable = Aluno.listarAlunosMatriculados(id);
+
+            gridAlunosMatriculados.Refresh();
 
         }
 
@@ -49,7 +70,7 @@ namespace MyAcademy
 
         private void gridAlunosMatriculados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            idAlunoSelecionado = gridAlunosMatriculados.Rows[0].Cells[0].Value.ToString();
         }
 
         private void gridAlunosMatriculados_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -72,12 +93,15 @@ namespace MyAcademy
 
         private void btn_remover_Click(object sender, EventArgs e)
         {
-
+            Aluno.removerAluno(idAlunoSelecionado,idTurmaSelecionada);
+            gridAlunosMatriculados.Refresh();
+            MessageBox.Show("Aluno removido da turma", "Aviso", MessageBoxButtons.OK);
         }
 
         private void btn_matricular_Click(object sender, EventArgs e)
         {
-
+            F_GridAlunosOnFormGestaoTurma gridAlunos = new F_GridAlunosOnFormGestaoTurma(this);
+            gridAlunos.ShowDialog();
         }
     }
 }

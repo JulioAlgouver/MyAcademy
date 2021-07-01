@@ -19,6 +19,7 @@ namespace MyAcademy
             return conexao;
         }
 
+        //CADASTRO ALUNOS
         public Int32 codigo;
         public string nome;
         public string telefone;
@@ -28,6 +29,15 @@ namespace MyAcademy
         public string nomeConvenio;
         public string ativo;
         public DateTime dataCdastro = DateTime.Now.Date;
+
+
+        //MATRICULA ALUNOS
+        public Int32 id_matricula;
+        public Int32 id_turma;
+        public string desc_turma;
+        public Int32 id_aluno;
+        public string nome_aluno;
+        public DateTime data_matricula = DateTime.Now.Date;
 
         public static void novoAluno(Aluno aluno)
         {
@@ -269,14 +279,60 @@ namespace MyAcademy
         }
 
         //FUNÇÃO DE MATRICULAR E REMOVER ALUNO DE TURMA
-        public static void matricularAluno()
+        public static void matricularAluno(Aluno aluno)
         {
+            SQLiteDataAdapter dataAdapter = null;
+            DataTable dataTable = new DataTable();
 
+            var vcon = conexaoBanco();
+            var cmd = vcon.CreateCommand();
+            cmd.CommandText = @"INSERT INTO ALUNOS_TURMA (ID_TURMA, DESC_TURMA, ID_ALUNO, NOME_ALUNO, DATA_MATRTICULA)
+                                                    VALUES (@id_turma, @desc_turma, @id_aluno, @nome_aluno, @data_matricula)";
+            cmd.Parameters.AddWithValue("@id_turma", aluno.id_turma);
+            cmd.Parameters.AddWithValue("@desc_turma", aluno.desc_turma);
+            cmd.Parameters.AddWithValue("@id_aluno", aluno.id_aluno);
+            cmd.Parameters.AddWithValue("@nome_aluno", aluno.nome_aluno);
+            cmd.Parameters.AddWithValue("@data_matricula", aluno.data_matricula);
+            cmd.ExecuteNonQuery();
+            dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+            dataAdapter.Fill(dataTable);
+            vcon.Close();
         }
 
-        public static void removerAluno()
+        public static DataTable listarAlunosMatriculados(string id)
         {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
 
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT ID_ALUNO AS 'CODIGO' , NOME_ALUNO AS 'NOME' FROM ALUNOS_TURMAS WHERE ID_TURMA ='"+id+"'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+
+            }catch(Exception error)
+            {
+                throw error;
+            }
+        }
+
+        public static void removerAluno(string idAluno, string idTurma)
+        {
+            SQLiteDataAdapter dataAdapter = null;
+            DataTable dataTable = new DataTable();
+
+            var vcon = conexaoBanco();
+            var cmd = vcon.CreateCommand();
+            cmd.CommandText = "DELETE FROM ALUNOS_TURMA WHERE ID_ALUNO ='"+idAluno+"' AND ID_TURMA ='"+idTurma+"'";
+            cmd.ExecuteNonQuery();
+            dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+            dataAdapter.Fill(dataTable);
+            vcon.Close();
         }
     }
 }
