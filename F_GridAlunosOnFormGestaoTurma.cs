@@ -46,7 +46,9 @@ namespace MyAcademy
             Aluno.matricularAluno(aluno);
             this.Close();
 
-            FormGestaoTurmas.gridAlunosMatriculados.Refresh();
+            string id = FormGestaoTurmas.gridAlunosMatriculados.SelectedRows[0].Cells[0].Value.ToString();
+            dataTable = Aluno.listarAlunosMatriculados(id);
+            FormGestaoTurmas.gridAlunosMatriculados.DataSource = Aluno.listarAlunosMatriculados(id);
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)

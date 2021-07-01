@@ -67,29 +67,37 @@ namespace MyAcademy
             // 
             // btn_cancelar
             // 
+            this.btn_cancelar.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Font = new System.Drawing.Font("Futura Bk BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.Location = new System.Drawing.Point(73, 267);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(141, 37);
+            this.btn_cancelar.Size = new System.Drawing.Size(141, 47);
             this.btn_cancelar.TabIndex = 3;
             this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_selecionar
             // 
+            this.btn_selecionar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_selecionar.FlatAppearance.BorderSize = 0;
+            this.btn_selecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_selecionar.Font = new System.Drawing.Font("Futura Bk BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_selecionar.Location = new System.Drawing.Point(245, 267);
             this.btn_selecionar.Name = "btn_selecionar";
-            this.btn_selecionar.Size = new System.Drawing.Size(141, 37);
+            this.btn_selecionar.Size = new System.Drawing.Size(141, 47);
             this.btn_selecionar.TabIndex = 4;
             this.btn_selecionar.Text = "Selecionar";
-            this.btn_selecionar.UseVisualStyleBackColor = true;
+            this.btn_selecionar.UseVisualStyleBackColor = false;
             this.btn_selecionar.Click += new System.EventHandler(this.btn_selecionar_Click);
             // 
             // F_GridAlunosOnFormGestaoTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 316);
+            this.ClientSize = new System.Drawing.Size(469, 326);
             this.Controls.Add(this.btn_selecionar);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.gridAlunos);
