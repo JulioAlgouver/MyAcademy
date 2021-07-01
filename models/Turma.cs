@@ -110,6 +110,28 @@ namespace MyAcademy
             }
         }
 
+        public static DataTable obterLimiteAlunos(string id)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT LIMITE_ALUNOS FROM TURMAS WHERE CODIGO = '" + id + "'";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }
+            catch(Exception error)
+            {
+                throw error;
+            }
+        } 
+
         public static DataTable localizarTurmaInativaPorID(string id)
         {
             try

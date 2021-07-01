@@ -106,8 +106,22 @@ namespace MyAcademy
 
         private void btn_matricular_Click(object sender, EventArgs e)
         {
-            F_GridAlunosOnFormGestaoTurma gridAlunos = new F_GridAlunosOnFormGestaoTurma(this);
-            gridAlunos.ShowDialog();
+            DataTable dataTable = new DataTable();
+            string id = gridTurmas.SelectedRows[0].Cells[0].Value.ToString();
+            dataTable = Turma.obterLimiteAlunos(id);
+
+            int limiteAlunos = Int32.Parse(dataTable.Rows[0].Field<Int64>("LIMITE_ALUNOS").ToString());
+
+            if (gridAlunosMatriculados.RowCount >= limiteAlunos)
+            {
+                MessageBox.Show("Turma selecionada já está em seu limite de alunos","Alerta!",MessageBoxButtons.OK);
+                return;
+            }
+            else
+            {
+                F_GridAlunosOnFormGestaoTurma gridAlunos = new F_GridAlunosOnFormGestaoTurma(this);
+                gridAlunos.ShowDialog();
+            }
         }
     }
 }
