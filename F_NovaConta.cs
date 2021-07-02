@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace MyAcademy
 {
-    public partial class F_GestãoContas : Form
+    public partial class F_NovaConta : Form
     {
-        public F_GestãoContas()
+        public F_NovaConta()
         {
             InitializeComponent();
-        }
-        private void btn_adicionar_Click(object sender, EventArgs e)
-        {
-            F_NovaConta novaConta = new F_NovaConta();
-            novaConta.ShowDialog();
         }
     }
 }

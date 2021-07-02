@@ -88,6 +88,7 @@ namespace MyAcademy
             this.btn_adicionar.TabIndex = 0;
             this.btn_adicionar.Text = "Adicionar Conta";
             this.btn_adicionar.UseVisualStyleBackColor = false;
+            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
             // 
             // btn_localizar
             // 

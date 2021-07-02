@@ -191,6 +191,12 @@
     <Compile Include="F_GridTurma.Designer.cs">
       <DependentUpon>F_GridTurma.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_NovaConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_NovaConta.Designer.cs">
+      <DependentUpon>F_NovaConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_ViewAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -431,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Login.resx">
       <DependentUpon>F_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_NovaConta.resx">
+      <DependentUpon>F_NovaConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Painel.resx">
       <DependentUpon>F_Painel.cs</DependentUpon>
