@@ -54,6 +54,7 @@ namespace MyAcademy
             this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cancelar.FlatAppearance.BorderSize = 0;
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Font = new System.Drawing.Font("Futura Bk BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.Location = new System.Drawing.Point(15, 175);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(129, 39);
@@ -64,10 +65,11 @@ namespace MyAcademy
             // 
             // btn_salvar
             // 
-            this.btn_salvar.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_salvar.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_salvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_salvar.FlatAppearance.BorderSize = 0;
             this.btn_salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salvar.Font = new System.Drawing.Font("Futura Bk BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salvar.Location = new System.Drawing.Point(179, 175);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(126, 39);

@@ -112,5 +112,11 @@ namespace MyAcademy
             F_GestãoTurmas gestaoTurmas = new F_GestãoTurmas();
             gestaoTurmas.ShowDialog();
         }
+
+        private void contasPagarReceberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_GestãoContas gestaoContas = new F_GestãoContas();
+            gestaoContas.ShowDialog();
+        }
     }
 }

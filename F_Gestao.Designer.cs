@@ -54,6 +54,7 @@
             this.calendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contasPagarReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -225,7 +226,8 @@
             // gestãoToolStripMenuItem
             // 
             this.gestãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.controleDeTurmasToolStripMenuItem});
+            this.controleDeTurmasToolStripMenuItem,
+            this.contasPagarReceberToolStripMenuItem});
             this.gestãoToolStripMenuItem.Name = "gestãoToolStripMenuItem";
             this.gestãoToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.gestãoToolStripMenuItem.Text = "Gestão";
@@ -233,7 +235,7 @@
             // controleDeTurmasToolStripMenuItem
             // 
             this.controleDeTurmasToolStripMenuItem.Name = "controleDeTurmasToolStripMenuItem";
-            this.controleDeTurmasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.controleDeTurmasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.controleDeTurmasToolStripMenuItem.Text = "Controle de Turmas";
             this.controleDeTurmasToolStripMenuItem.Click += new System.EventHandler(this.controleDeTurmasToolStripMenuItem_Click);
             // 
@@ -266,6 +268,13 @@
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
+            // 
+            // contasPagarReceberToolStripMenuItem
+            // 
+            this.contasPagarReceberToolStripMenuItem.Name = "contasPagarReceberToolStripMenuItem";
+            this.contasPagarReceberToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.contasPagarReceberToolStripMenuItem.Text = "Contas (Pagar/Receber)";
+            this.contasPagarReceberToolStripMenuItem.Click += new System.EventHandler(this.contasPagarReceberToolStripMenuItem_Click);
             // 
             // F_Gestao
             // 
@@ -315,5 +324,6 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroDeHorariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoHorarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarHorarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contasPagarReceberToolStripMenuItem;
     }
 }
