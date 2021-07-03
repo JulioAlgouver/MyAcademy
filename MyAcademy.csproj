@@ -197,6 +197,12 @@
     <Compile Include="F_NovaConta.Designer.cs">
       <DependentUpon>F_NovaConta.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_PlanoContas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_PlanoContas.Designer.cs">
+      <DependentUpon>F_PlanoContas.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_ViewAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -443,6 +449,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Painel.resx">
       <DependentUpon>F_Painel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_PlanoContas.resx">
+      <DependentUpon>F_PlanoContas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_ViewAluno.resx">
       <DependentUpon>F_ViewAluno.cs</DependentUpon>

@@ -118,5 +118,11 @@ namespace MyAcademy
             F_GestãoContas gestaoContas = new F_GestãoContas();
             gestaoContas.ShowDialog();
         }
+
+        private void planoDeContasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_PlanoContas planoContas = new F_PlanoContas();
+            planoContas.ShowDialog();
+        }
     }
 }

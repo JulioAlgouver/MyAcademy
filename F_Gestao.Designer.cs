@@ -50,11 +50,13 @@
             this.consultarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controleDeTurmasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contasPagarReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ferramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contasPagarReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planoDeContasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -227,7 +229,9 @@
             // 
             this.gestãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.controleDeTurmasToolStripMenuItem,
-            this.contasPagarReceberToolStripMenuItem});
+            this.toolStripMenuItem1,
+            this.contasPagarReceberToolStripMenuItem,
+            this.planoDeContasToolStripMenuItem});
             this.gestãoToolStripMenuItem.Name = "gestãoToolStripMenuItem";
             this.gestãoToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.gestãoToolStripMenuItem.Text = "Gestão";
@@ -238,6 +242,13 @@
             this.controleDeTurmasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.controleDeTurmasToolStripMenuItem.Text = "Controle de Turmas";
             this.controleDeTurmasToolStripMenuItem.Click += new System.EventHandler(this.controleDeTurmasToolStripMenuItem_Click);
+            // 
+            // contasPagarReceberToolStripMenuItem
+            // 
+            this.contasPagarReceberToolStripMenuItem.Name = "contasPagarReceberToolStripMenuItem";
+            this.contasPagarReceberToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.contasPagarReceberToolStripMenuItem.Text = "Contas (Pagar/Receber)";
+            this.contasPagarReceberToolStripMenuItem.Click += new System.EventHandler(this.contasPagarReceberToolStripMenuItem_Click);
             // 
             // ferramentasToolStripMenuItem
             // 
@@ -269,12 +280,17 @@
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
-            // contasPagarReceberToolStripMenuItem
+            // planoDeContasToolStripMenuItem
             // 
-            this.contasPagarReceberToolStripMenuItem.Name = "contasPagarReceberToolStripMenuItem";
-            this.contasPagarReceberToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.contasPagarReceberToolStripMenuItem.Text = "Contas (Pagar/Receber)";
-            this.contasPagarReceberToolStripMenuItem.Click += new System.EventHandler(this.contasPagarReceberToolStripMenuItem_Click);
+            this.planoDeContasToolStripMenuItem.Name = "planoDeContasToolStripMenuItem";
+            this.planoDeContasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.planoDeContasToolStripMenuItem.Text = "Plano de Contas";
+            this.planoDeContasToolStripMenuItem.Click += new System.EventHandler(this.planoDeContasToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(196, 6);
             // 
             // F_Gestao
             // 
@@ -325,5 +341,7 @@
         private System.Windows.Forms.ToolStripMenuItem novoHorarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarHorarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contasPagarReceberToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem planoDeContasToolStripMenuItem;
     }
 }
