@@ -124,5 +124,11 @@ namespace MyAcademy
             F_PlanoContas planoContas = new F_PlanoContas();
             planoContas.ShowDialog();
         }
+
+        private void novaContaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_CadContaCorrente cadContaCorrente = new F_CadContaCorrente();
+            cadContaCorrente.ShowDialog();
+        }
     }
 }

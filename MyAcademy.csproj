@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="models\ContaCorrente.cs" />
     <Compile Include="F_BuscaAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +95,12 @@
     </Compile>
     <Compile Include="F_BuscaTurma.Designer.cs">
       <DependentUpon>F_BuscaTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_CadContaCorrente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_CadContaCorrente.Designer.cs">
+      <DependentUpon>F_CadContaCorrente.cs</DependentUpon>
     </Compile>
     <Compile Include="F_Calc.cs">
       <SubType>Form</SubType>
@@ -359,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_CadAluno.resx">
       <DependentUpon>F_CadAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_CadContaCorrente.resx">
+      <DependentUpon>F_CadContaCorrente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_CadConvenio.resx">
       <DependentUpon>F_CadConvenio.cs</DependentUpon>

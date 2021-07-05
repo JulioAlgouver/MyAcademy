@@ -50,13 +50,16 @@
             this.consultarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controleDeTurmasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.contasPagarReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planoDeContasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ferramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.planoDeContasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.contaCorrenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novaContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contasCorrentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -231,7 +234,8 @@
             this.controleDeTurmasToolStripMenuItem,
             this.toolStripMenuItem1,
             this.contasPagarReceberToolStripMenuItem,
-            this.planoDeContasToolStripMenuItem});
+            this.planoDeContasToolStripMenuItem,
+            this.contaCorrenteToolStripMenuItem});
             this.gestãoToolStripMenuItem.Name = "gestãoToolStripMenuItem";
             this.gestãoToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.gestãoToolStripMenuItem.Text = "Gestão";
@@ -243,12 +247,24 @@
             this.controleDeTurmasToolStripMenuItem.Text = "Controle de Turmas";
             this.controleDeTurmasToolStripMenuItem.Click += new System.EventHandler(this.controleDeTurmasToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(196, 6);
+            // 
             // contasPagarReceberToolStripMenuItem
             // 
             this.contasPagarReceberToolStripMenuItem.Name = "contasPagarReceberToolStripMenuItem";
             this.contasPagarReceberToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.contasPagarReceberToolStripMenuItem.Text = "Contas (Pagar/Receber)";
             this.contasPagarReceberToolStripMenuItem.Click += new System.EventHandler(this.contasPagarReceberToolStripMenuItem_Click);
+            // 
+            // planoDeContasToolStripMenuItem
+            // 
+            this.planoDeContasToolStripMenuItem.Name = "planoDeContasToolStripMenuItem";
+            this.planoDeContasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.planoDeContasToolStripMenuItem.Text = "Plano de Contas";
+            this.planoDeContasToolStripMenuItem.Click += new System.EventHandler(this.planoDeContasToolStripMenuItem_Click);
             // 
             // ferramentasToolStripMenuItem
             // 
@@ -280,17 +296,27 @@
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
-            // planoDeContasToolStripMenuItem
+            // contaCorrenteToolStripMenuItem
             // 
-            this.planoDeContasToolStripMenuItem.Name = "planoDeContasToolStripMenuItem";
-            this.planoDeContasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.planoDeContasToolStripMenuItem.Text = "Plano de Contas";
-            this.planoDeContasToolStripMenuItem.Click += new System.EventHandler(this.planoDeContasToolStripMenuItem_Click);
+            this.contaCorrenteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novaContaToolStripMenuItem,
+            this.contasCorrentesToolStripMenuItem});
+            this.contaCorrenteToolStripMenuItem.Name = "contaCorrenteToolStripMenuItem";
+            this.contaCorrenteToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.contaCorrenteToolStripMenuItem.Text = "Conta Corrente";
             // 
-            // toolStripMenuItem1
+            // novaContaToolStripMenuItem
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(196, 6);
+            this.novaContaToolStripMenuItem.Name = "novaContaToolStripMenuItem";
+            this.novaContaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novaContaToolStripMenuItem.Text = "Nova Conta";
+            this.novaContaToolStripMenuItem.Click += new System.EventHandler(this.novaContaToolStripMenuItem_Click);
+            // 
+            // contasCorrentesToolStripMenuItem
+            // 
+            this.contasCorrentesToolStripMenuItem.Name = "contasCorrentesToolStripMenuItem";
+            this.contasCorrentesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contasCorrentesToolStripMenuItem.Text = "Consultar";
             // 
             // F_Gestao
             // 
@@ -343,5 +369,8 @@
         private System.Windows.Forms.ToolStripMenuItem contasPagarReceberToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem planoDeContasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contaCorrenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem novaContaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contasCorrentesToolStripMenuItem;
     }
 }
