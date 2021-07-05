@@ -22,8 +22,8 @@ namespace MyAcademy
         public Int32 codigo;
         public string descricao;
         public string banco;
-        public Int32 agencia;
-        public Int32 contaCorrente;
+        public string agencia;
+        public string contaCorrente;
         public double saldoInicial;
 
         public static void novaConta(ContaCorrente contaCorrente)

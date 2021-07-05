@@ -16,10 +16,9 @@ namespace MyAcademy
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void F_CadContaCorrente_Load(object sender, EventArgs e)
         {
-            this.Close();
+            tbox_saldoInicial.Text = "0,00";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -27,16 +26,15 @@ namespace MyAcademy
             ContaCorrente contaCorrente = new ContaCorrente();
             contaCorrente.descricao = tbox_descricao.Text;
             contaCorrente.banco = tbox_banco.Text;
-            contaCorrente.agencia = Int32.Parse(tbox_agencia.Text);
-            contaCorrente.contaCorrente = Int32.Parse(tbox_contaCorrente.Text);
-            contaCorrente.saldoInicial = Int32.Parse(tbox_saldoInicial.Text);
+            contaCorrente.agencia = tbox_agencia.Text;
+            contaCorrente.contaCorrente = tbox_contaCorrente.Text;
+            contaCorrente.saldoInicial = Double.Parse(tbox_saldoInicial.Text);
             ContaCorrente.novaConta(contaCorrente);
             this.Close();
         }
-
-        private void F_CadContaCorrente_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            tbox_saldoInicial.Text = "0,00";
+            this.Close();
         }
     }
 }
