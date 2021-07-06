@@ -65,6 +65,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="F_CadPlanoContas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_CadPlanoContas.Designer.cs">
+      <DependentUpon>F_CadPlanoContas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="models\Conta.cs" />
+    <Compile Include="models\PlanoContas.cs" />
     <Compile Include="F_ViewContas.cs">
       <SubType>Form</SubType>
     </Compile>
