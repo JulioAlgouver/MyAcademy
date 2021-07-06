@@ -317,6 +317,7 @@
             this.contasCorrentesToolStripMenuItem.Name = "contasCorrentesToolStripMenuItem";
             this.contasCorrentesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contasCorrentesToolStripMenuItem.Text = "Consultar";
+            this.contasCorrentesToolStripMenuItem.Click += new System.EventHandler(this.contasCorrentesToolStripMenuItem_Click);
             // 
             // F_Gestao
             // 

@@ -130,5 +130,11 @@ namespace MyAcademy
             F_CadContaCorrente cadContaCorrente = new F_CadContaCorrente();
             cadContaCorrente.ShowDialog();
         }
+
+        private void contasCorrentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_ViewContas viewContas = new F_ViewContas();
+            viewContas.ShowDialog();
+        }
     }
 }

@@ -32,7 +32,7 @@ namespace MyAcademy
             {
                 var vcon = conexaoBanco();
                 var cmd = vcon.CreateCommand();
-                cmd.CommandText = @"INSERT INTO CONTAS_CORRENTES (DESCRICAO, BANCO, AGENCIA, CONTA_CORRENTE, SALDO_INICIAL)
+                cmd.CommandText = @"INSERT INTO CONTAS_CORRENTE (DESCRICAO, BANCO, AGENCIA, CONTA_CORRENTE, SALDO_INICIAL)
                                                     VALUES (@descricao,@banco,@agencia,@contaCorrente,@saldoInicial)";
                 cmd.Parameters.AddWithValue("@descricao", contaCorrente.descricao);
                 cmd.Parameters.AddWithValue("@banco", contaCorrente.banco);
@@ -47,6 +47,73 @@ namespace MyAcademy
             catch(Exception error)
             {
                 MessageBox.Show("Não foi possivel efetuar o cadastro!","Erro",MessageBoxButtons.OK);
+                throw error;
+            }
+        }
+
+        public static void atualizarConta(ContaCorrente contaCorrente)
+        {
+            try
+            {
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "UPDATE CONTAS_CORRENTE SET DESCRICAO='" + contaCorrente.descricao +
+                                                               "', BANCO='" + contaCorrente.banco +
+                                                               "', AGENCIA='" + contaCorrente.agencia +
+                                                               "', CONTA_CORRENTE='" + contaCorrente.contaCorrente + "'";
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Cadastro atualizado com sucesso", "Aviso", MessageBoxButtons.OK);
+                vcon.Close();
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Erro ao atualizar cadastro","Alerta",MessageBoxButtons.OK);
+                throw error;
+            }
+        }
+
+        public static DataTable listarContasCorrente()
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT DESCRICAO FROM CONTAS_CORRENTE";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText,vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }catch(Exception error)
+            {
+                MessageBox.Show("");
+                throw error;
+            }
+        }
+
+        public static DataTable obterDadosContasCorrente(string nome)
+        {
+            try
+            {
+                SQLiteDataAdapter dataAdapter = null;
+                DataTable dataTable = new DataTable();
+
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM CONTAS_CORRENTE";
+                dataAdapter = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                dataAdapter.Fill(dataTable);
+                vcon.Close();
+
+                return dataTable;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Não foi possível obter dados","Alerta",MessageBoxButtons.OK);
                 throw error;
             }
         }

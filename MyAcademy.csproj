@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="F_ViewContas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ViewContas.Designer.cs">
+      <DependentUpon>F_ViewContas.cs</DependentUpon>
+    </Compile>
     <Compile Include="models\ContaCorrente.cs" />
     <Compile Include="F_BuscaAluno.cs">
       <SubType>Form</SubType>
@@ -465,6 +471,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_ViewAluno.resx">
       <DependentUpon>F_ViewAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_ViewContas.resx">
+      <DependentUpon>F_ViewContas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_ViewConvenio.resx">
       <DependentUpon>F_ViewConvenio.cs</DependentUpon>
