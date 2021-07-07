@@ -390,6 +390,9 @@
     <EmbeddedResource Include="F_CadHorario.resx">
       <DependentUpon>F_CadHorario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_CadPlanoContas.resx">
+      <DependentUpon>F_CadPlanoContas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_CadProfessor.resx">
       <DependentUpon>F_CadProfessor.cs</DependentUpon>
     </EmbeddedResource>

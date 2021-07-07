@@ -72,36 +72,47 @@ namespace MyAcademy
             this.viewPlanoContas.Name = "viewPlanoContas";
             this.viewPlanoContas.Size = new System.Drawing.Size(599, 324);
             this.viewPlanoContas.TabIndex = 0;
+            this.viewPlanoContas.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.viewPlanoContas_AfterSelect);
             // 
             // btn_adicionar
             // 
+            this.btn_adicionar.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_adicionar.FlatAppearance.BorderSize = 0;
+            this.btn_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_adicionar.Font = new System.Drawing.Font("Futura Bk BT", 10F);
             this.btn_adicionar.Location = new System.Drawing.Point(21, 26);
             this.btn_adicionar.Name = "btn_adicionar";
             this.btn_adicionar.Size = new System.Drawing.Size(141, 41);
             this.btn_adicionar.TabIndex = 1;
             this.btn_adicionar.Text = "Adicionar";
-            this.btn_adicionar.UseVisualStyleBackColor = true;
+            this.btn_adicionar.UseVisualStyleBackColor = false;
+            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
             // 
             // btn_remover
             // 
+            this.btn_remover.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_remover.FlatAppearance.BorderSize = 0;
+            this.btn_remover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_remover.Font = new System.Drawing.Font("Futura Bk BT", 10F);
             this.btn_remover.Location = new System.Drawing.Point(21, 85);
             this.btn_remover.Name = "btn_remover";
             this.btn_remover.Size = new System.Drawing.Size(141, 41);
             this.btn_remover.TabIndex = 2;
             this.btn_remover.Text = "Remover";
-            this.btn_remover.UseVisualStyleBackColor = true;
+            this.btn_remover.UseVisualStyleBackColor = false;
             // 
             // btn_propriedades
             // 
+            this.btn_propriedades.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_propriedades.FlatAppearance.BorderSize = 0;
+            this.btn_propriedades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_propriedades.Font = new System.Drawing.Font("Futura Bk BT", 10F);
             this.btn_propriedades.Location = new System.Drawing.Point(21, 145);
             this.btn_propriedades.Name = "btn_propriedades";
             this.btn_propriedades.Size = new System.Drawing.Size(141, 41);
             this.btn_propriedades.TabIndex = 3;
             this.btn_propriedades.Text = "Propriedades";
-            this.btn_propriedades.UseVisualStyleBackColor = true;
+            this.btn_propriedades.UseVisualStyleBackColor = false;
             // 
             // F_PlanoContas
             // 
@@ -124,10 +135,10 @@ namespace MyAcademy
         }
 
         #endregion
-        private System.Windows.Forms.TreeView viewPlanoContas;
         private System.Windows.Forms.Button btn_adicionar;
         private System.Windows.Forms.Button btn_propriedades;
         private System.Windows.Forms.Button btn_remover;
         public System.Windows.Forms.SplitContainer splitContainer1;
+        public System.Windows.Forms.TreeView viewPlanoContas;
     }
 }
