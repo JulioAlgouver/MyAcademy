@@ -59,7 +59,7 @@ namespace MyAcademy
 
                 var vcon = conexaoBanco();
                 var cmd = vcon.CreateCommand();
-                cmd.CommandText = "SELECT * FROM CONTAS_CENTRO_CUSTO WHERE TIPO_CONTA = '' ";
+                cmd.CommandText = "SELECT * FROM CONTAS_CENTRO_CUSTO";
                 dataAdapter = new SQLiteDataAdapter(cmd.CommandText,vcon);
                 dataAdapter.Fill(dataTable);
                 vcon.Close();

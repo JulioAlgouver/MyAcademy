@@ -39,7 +39,7 @@ namespace MyAcademy
             }
             else
             {
-
+                MessageBox.Show("Nenhum tipo selecionado","Alerta",MessageBoxButtons.OK);
             }
 
             PlanoContas planoContas = new PlanoContas();
@@ -49,6 +49,8 @@ namespace MyAcademy
             planoContas.ativo = "Sim";
             planoContas.codigoRaiz = FormPlanoContas.viewPlanoContas.SelectedNode.Name.ToString();
             PlanoContas.novoItem(planoContas);
+
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

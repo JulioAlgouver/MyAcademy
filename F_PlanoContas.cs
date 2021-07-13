@@ -12,7 +12,7 @@ namespace MyAcademy
 {
     public partial class F_PlanoContas : Form
     {
-        int countLinhas;
+        int countLinhas, countItems;
         bool isSelected;
 
         public F_PlanoContas()
@@ -29,22 +29,10 @@ namespace MyAcademy
 
             for (countLinhas=0; countLinhas < dataTable.Rows.Count; countLinhas++)
             {
-                if (dataTable.Rows[countLinhas].Field<string>("TIPO_CONTA").ToString() == "")
-                {
-                viewPlanoContas.Nodes.Add(Name = "node_" + dataTable.Rows[countLinhas].Field<string>("CODIGO").ToString(),
-                                          Text = dataTable.Rows[countLinhas].Field<string>("CODIGO").ToString() + " : " + dataTable.Rows[countLinhas].Field<string>("DESCRICAO").ToString());
-                }
+                string nodeName = "node_" + dataTable.Rows[countLinhas].Field<string>("CODIGO").ToString();
+                string nodeText = dataTable.Rows[countLinhas].Field<string>("CODIGO").ToString() + " : " + dataTable.Rows[countLinhas].Field<string>("DESCRICAO").ToString();
 
-                if (dataTable.Rows[countLinhas].Field<string>("TIPO_CONTA").ToString() == "+")
-                {
-                    viewPlanoContas.Nodes.Add(Name = dataTable.Rows[countLinhas].Field<string>("DESCRICAO").ToString(),
-                                          Text = dataTable.Rows[countLinhas].Field<string>("CODIGO").ToString() + " : " + dataTable.Rows[countLinhas].Field<string>("DESCRICAO").ToString());
-                }
-
-                if (dataTable.Rows[countLinhas].Field<string>("TIPO_CONTA").ToString() == "-")
-                {
-
-                }
+                viewPlanoContas.Nodes.Add(Name = nodeName, Text = nodeText);
             }
         }
 
@@ -60,7 +48,7 @@ namespace MyAcademy
                 return;
             }
 
-            F_CadPlanoContas planoContas = new F_CadPlanoContas();
+            F_CadPlanoContas planoContas = new F_CadPlanoContas(this);
             planoContas.ShowDialog();
         }
     }
