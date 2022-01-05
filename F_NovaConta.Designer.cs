@@ -38,7 +38,7 @@ namespace MyAcademy
             this.label3 = new System.Windows.Forms.Label();
             this.tbox_valor = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.tbox_valorFinal = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbox_desconto = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -144,15 +144,15 @@ namespace MyAcademy
             this.label4.TabIndex = 7;
             this.label4.Text = "Valor (R$)";
             // 
-            // maskedTextBox3
+            // tbox_valorFinal
             // 
-            this.maskedTextBox3.Enabled = false;
-            this.maskedTextBox3.Location = new System.Drawing.Point(16, 279);
-            this.maskedTextBox3.Mask = "$";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.ReadOnly = true;
-            this.maskedTextBox3.Size = new System.Drawing.Size(86, 20);
-            this.maskedTextBox3.TabIndex = 10;
+            this.tbox_valorFinal.Enabled = false;
+            this.tbox_valorFinal.Location = new System.Drawing.Point(16, 279);
+            this.tbox_valorFinal.Mask = "$";
+            this.tbox_valorFinal.Name = "tbox_valorFinal";
+            this.tbox_valorFinal.ReadOnly = true;
+            this.tbox_valorFinal.Size = new System.Drawing.Size(86, 20);
+            this.tbox_valorFinal.TabIndex = 10;
             // 
             // label5
             // 
@@ -504,7 +504,7 @@ namespace MyAcademy
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbox_desconto);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.tbox_valorFinal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbox_valor);
             this.Controls.Add(this.label4);
@@ -533,13 +533,9 @@ namespace MyAcademy
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox tbox_valor;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox tbox_desconto;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MaskedTextBox tbox_juros;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MaskedTextBox maskedTextBox6;
         private System.Windows.Forms.Label label8;
@@ -570,5 +566,9 @@ namespace MyAcademy
         private System.Windows.Forms.Button btn_buscarProfessor;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        public System.Windows.Forms.MaskedTextBox tbox_valor;
+        public System.Windows.Forms.MaskedTextBox tbox_valorFinal;
+        public System.Windows.Forms.MaskedTextBox tbox_desconto;
+        public System.Windows.Forms.MaskedTextBox tbox_juros;
     }
 }
