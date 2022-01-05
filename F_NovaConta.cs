@@ -12,6 +12,12 @@ namespace MyAcademy
 {
     public partial class F_NovaConta : Form
     {
+        double valorInicial;
+        double valorJuros;
+        double valorDesconto;
+        double valorFinal;
+
+
         public F_NovaConta()
         {
             InitializeComponent();
