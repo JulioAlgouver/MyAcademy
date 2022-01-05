@@ -36,13 +36,9 @@ namespace MyAcademy
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbox_valor = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbox_valorFinal = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tbox_desconto = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.tbox_juros = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -73,6 +69,10 @@ namespace MyAcademy
             this.btn_buscarProfessor = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.tbox_juros = new System.Windows.Forms.TextBox();
+            this.tbox_valorFinal = new System.Windows.Forms.TextBox();
+            this.tbox_valor = new System.Windows.Forms.TextBox();
+            this.tbox_desconto = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -127,14 +127,6 @@ namespace MyAcademy
             this.label3.TabIndex = 5;
             this.label3.Text = "Plano de Contas";
             // 
-            // tbox_valor
-            // 
-            this.tbox_valor.Location = new System.Drawing.Point(16, 157);
-            this.tbox_valor.Mask = "$";
-            this.tbox_valor.Name = "tbox_valor";
-            this.tbox_valor.Size = new System.Drawing.Size(86, 20);
-            this.tbox_valor.TabIndex = 8;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -143,16 +135,6 @@ namespace MyAcademy
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Valor (R$)";
-            // 
-            // tbox_valorFinal
-            // 
-            this.tbox_valorFinal.Enabled = false;
-            this.tbox_valorFinal.Location = new System.Drawing.Point(16, 279);
-            this.tbox_valorFinal.Mask = "$";
-            this.tbox_valorFinal.Name = "tbox_valorFinal";
-            this.tbox_valorFinal.ReadOnly = true;
-            this.tbox_valorFinal.Size = new System.Drawing.Size(86, 20);
-            this.tbox_valorFinal.TabIndex = 10;
             // 
             // label5
             // 
@@ -163,14 +145,6 @@ namespace MyAcademy
             this.label5.TabIndex = 9;
             this.label5.Text = "Valor Corrigido (R$)";
             // 
-            // tbox_desconto
-            // 
-            this.tbox_desconto.Location = new System.Drawing.Point(16, 239);
-            this.tbox_desconto.Mask = "$";
-            this.tbox_desconto.Name = "tbox_desconto";
-            this.tbox_desconto.Size = new System.Drawing.Size(86, 20);
-            this.tbox_desconto.TabIndex = 12;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -179,14 +153,6 @@ namespace MyAcademy
             this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Desconto (R$)";
-            // 
-            // tbox_juros
-            // 
-            this.tbox_juros.Location = new System.Drawing.Point(16, 198);
-            this.tbox_juros.Mask = "$";
-            this.tbox_juros.Name = "tbox_juros";
-            this.tbox_juros.Size = new System.Drawing.Size(86, 20);
-            this.tbox_juros.TabIndex = 14;
             // 
             // label7
             // 
@@ -466,11 +432,43 @@ namespace MyAcademy
             this.button4.TabIndex = 43;
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // tbox_juros
+            // 
+            this.tbox_juros.Location = new System.Drawing.Point(17, 198);
+            this.tbox_juros.Name = "tbox_juros";
+            this.tbox_juros.Size = new System.Drawing.Size(100, 20);
+            this.tbox_juros.TabIndex = 44;
+            // 
+            // tbox_valorFinal
+            // 
+            this.tbox_valorFinal.Location = new System.Drawing.Point(17, 279);
+            this.tbox_valorFinal.Name = "tbox_valorFinal";
+            this.tbox_valorFinal.Size = new System.Drawing.Size(100, 20);
+            this.tbox_valorFinal.TabIndex = 45;
+            // 
+            // tbox_valor
+            // 
+            this.tbox_valor.Location = new System.Drawing.Point(16, 157);
+            this.tbox_valor.Name = "tbox_valor";
+            this.tbox_valor.Size = new System.Drawing.Size(100, 20);
+            this.tbox_valor.TabIndex = 46;
+            // 
+            // tbox_desconto
+            // 
+            this.tbox_desconto.Location = new System.Drawing.Point(17, 239);
+            this.tbox_desconto.Name = "tbox_desconto";
+            this.tbox_desconto.Size = new System.Drawing.Size(100, 20);
+            this.tbox_desconto.TabIndex = 47;
+            // 
             // F_NovaConta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 580);
+            this.Controls.Add(this.tbox_desconto);
+            this.Controls.Add(this.tbox_valor);
+            this.Controls.Add(this.tbox_valorFinal);
+            this.Controls.Add(this.tbox_juros);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_buscarProfessor);
@@ -500,13 +498,9 @@ namespace MyAcademy
             this.Controls.Add(this.label9);
             this.Controls.Add(this.maskedTextBox6);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.tbox_juros);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.tbox_desconto);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.tbox_valorFinal);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.tbox_valor);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
@@ -566,9 +560,9 @@ namespace MyAcademy
         private System.Windows.Forms.Button btn_buscarProfessor;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        public System.Windows.Forms.MaskedTextBox tbox_valor;
-        public System.Windows.Forms.MaskedTextBox tbox_valorFinal;
-        public System.Windows.Forms.MaskedTextBox tbox_desconto;
-        public System.Windows.Forms.MaskedTextBox tbox_juros;
+        private System.Windows.Forms.TextBox tbox_juros;
+        private System.Windows.Forms.TextBox tbox_valorFinal;
+        private System.Windows.Forms.TextBox tbox_valor;
+        private System.Windows.Forms.TextBox tbox_desconto;
     }
 }

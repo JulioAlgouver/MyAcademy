@@ -30,7 +30,7 @@ namespace MyAcademy
             tbox_valor.Text = valorInicial.ToString();
             tbox_juros.Text = valorJuros.ToString();
             tbox_desconto.Text = valorDesconto.ToString();
-            tbox_valorFinal.Text = valorFinal.ToString(); 
+            fd.Text = valorFinal.ToString(); 
         }
 
         public void calculaValorFinal()
