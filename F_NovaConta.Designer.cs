@@ -435,6 +435,7 @@ namespace MyAcademy
             // tbox_juros
             // 
             this.tbox_juros.Location = new System.Drawing.Point(17, 198);
+            this.tbox_juros.MaxLength = 8;
             this.tbox_juros.Name = "tbox_juros";
             this.tbox_juros.Size = new System.Drawing.Size(100, 20);
             this.tbox_juros.TabIndex = 44;
@@ -442,6 +443,7 @@ namespace MyAcademy
             // tbox_valorFinal
             // 
             this.tbox_valorFinal.Location = new System.Drawing.Point(17, 279);
+            this.tbox_valorFinal.MaxLength = 8;
             this.tbox_valorFinal.Name = "tbox_valorFinal";
             this.tbox_valorFinal.Size = new System.Drawing.Size(100, 20);
             this.tbox_valorFinal.TabIndex = 45;
@@ -449,13 +451,16 @@ namespace MyAcademy
             // tbox_valor
             // 
             this.tbox_valor.Location = new System.Drawing.Point(16, 157);
+            this.tbox_valor.MaxLength = 8;
             this.tbox_valor.Name = "tbox_valor";
             this.tbox_valor.Size = new System.Drawing.Size(100, 20);
             this.tbox_valor.TabIndex = 46;
+            this.tbox_valor.TextChanged += new System.EventHandler(this.tbox_valor_TextChanged);
             // 
             // tbox_desconto
             // 
             this.tbox_desconto.Location = new System.Drawing.Point(17, 239);
+            this.tbox_desconto.MaxLength = 8;
             this.tbox_desconto.Name = "tbox_desconto";
             this.tbox_desconto.Size = new System.Drawing.Size(100, 20);
             this.tbox_desconto.TabIndex = 47;
